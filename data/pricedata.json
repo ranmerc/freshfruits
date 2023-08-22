@@ -1,0 +1,279 @@
+[
+  {
+    "id": 1,
+    "packs": [
+      {
+        "type": "count",
+        "quantity": 1,
+        "price": 70,
+        "discountPrice": 50
+      },
+      {
+        "type": "count",
+        "quantity": 6,
+        "price": 400,
+        "discountPrice": 300
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "packs": [
+      {
+        "type": "count",
+        "quantity": 12,
+        "price": 100,
+        "discountPrice": 90
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "packs": [
+      {
+        "type": "weight",
+        "quantity": 250,
+        "price": 100,
+        "discountPrice": 100
+      },
+      {
+        "type": "weight",
+        "quantity": 1000,
+        "price": 300,
+        "discountPrice": 270
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "packs": [
+      {
+        "type": "count",
+        "quantity": 6,
+        "price": 120,
+        "discountPrice": 120
+      },
+      {
+        "type": "count",
+        "quantity": 12,
+        "price": 220,
+        "discountPrice": 200
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "packs": [
+      {
+        "type": "count",
+        "quantity": 3,
+        "price": 80,
+        "discountPrice": 70
+      },
+      {
+        "type": "count",
+        "quantity": 6,
+        "price": 150,
+        "discountPrice": 135
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "packs": [
+      {
+        "type": "count",
+        "quantity": 4,
+        "price": 100,
+        "discountPrice": 90
+      },
+      {
+        "type": "count",
+        "quantity": 8,
+        "price": 190,
+        "discountPrice": 170
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "packs": [
+      {
+        "type": "weight",
+        "quantity": 250,
+        "price": 150,
+        "discountPrice": 150
+      },
+      {
+        "type": "weight",
+        "quantity": 500,
+        "price": 270,
+        "discountPrice": 240
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "packs": [
+      {
+        "type": "count",
+        "quantity": 1,
+        "price": 80,
+        "discountPrice": 80
+      },
+      {
+        "type": "count",
+        "quantity": 2,
+        "price": 150,
+        "discountPrice": 140
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "packs": [
+      {
+        "type": "weight",
+        "quantity": 250,
+        "price": 120,
+        "discountPrice": 120
+      },
+      {
+        "type": "weight",
+        "quantity": 500,
+        "price": 200,
+        "discountPrice": 180
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "packs": [
+      {
+        "type": "weight",
+        "quantity": 100,
+        "price": 120,
+        "discountPrice": 120
+      },
+      {
+        "type": "weight",
+        "quantity": 250,
+        "price": 250,
+        "discountPrice": 225
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "packs": [
+      {
+        "type": "count",
+        "quantity": 12,
+        "price": 200,
+        "discountPrice": 180
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "packs": [
+      {
+        "type": "weight",
+        "quantity": 250,
+        "price": 180,
+        "discountPrice": 180
+      },
+      {
+        "type": "weight",
+        "quantity": 500,
+        "price": 340,
+        "discountPrice": 306
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "packs": [
+      {
+        "type": "count",
+        "quantity": 1,
+        "price": 40,
+        "discountPrice": 40
+      },
+      {
+        "type": "count",
+        "quantity": 2,
+        "price": 75,
+        "discountPrice": 68
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "packs": [
+      {
+        "type": "weight",
+        "quantity": 250,
+        "price": 150,
+        "discountPrice": 150
+      },
+      {
+        "type": "weight",
+        "quantity": 500,
+        "price": 280,
+        "discountPrice": 252
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "packs": [
+      {
+        "type": "count",
+        "quantity": 1,
+        "price": 60,
+        "discountPrice": 60
+      },
+      {
+        "type": "count",
+        "quantity": 2,
+        "price": 110,
+        "discountPrice": 100
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "packs": [
+      {
+        "type": "count",
+        "quantity": 1,
+        "price": 40,
+        "discountPrice": 40
+      },
+      {
+        "type": "count",
+        "quantity": 2,
+        "price": 75,
+        "discountPrice": 68
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "packs": [
+      {
+        "type": "weight",
+        "quantity": 250,
+        "price": 120,
+        "discountPrice": 120
+      },
+      {
+        "type": "weight",
+        "quantity": 500,
+        "price": 220,
+        "discountPrice": 198
+      }
+    ]
+  }
+]

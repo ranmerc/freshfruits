@@ -1,0 +1,240 @@
+[
+  {
+    "id": 1,
+    "name": "watermelon",
+    "images": [
+      "/fruit-1.jpeg",
+      "/fruit-2.jpeg",
+      "/fruit-3.jpeg",
+      "/fruit-4.jpeg"
+    ],
+    "description": "Watermelon is a delicious and refreshing fruit that's also good for you. It contains only 46 calories per cup but is high in vitamin C, vitamin A and many healthy plant compounds. Here are the top 9 health benefits of eating watermelon. Helps You Hydrate. Contains Nutrients and Beneficial Plant Compounds. Contains Compounds That May Help Prevent Cancer. May Improve Heart Health. May Lower Inflammation and Oxidative Stress. May Help Prevent Macular Degeneration. May Help Relieve Muscle Soreness. Is Good for Skin and Hair.",
+    "shelfLife": 7,
+    "storageInstructions": "Store in the fridge",
+    "countryOfOrigin": "South Africa"
+  },
+  {
+    "id": 2,
+    "name": "banana",
+    "images": [
+      "/fruit-1.jpeg",
+      "/fruit-2.jpeg",
+      "/fruit-3.jpeg",
+      "/fruit-4.jpeg"
+    ],
+    "description": "Bananas are extremely healthy and delicious. They contain several essential nutrients and provide benefits for digestion, heart health and weight loss. Aside from being very nutritious, they are also a highly convenient snack food. Here are 11 science-based health benefits of bananas. Bananas Contain Many Important Nutrients. Bananas Contain Nutrients That Moderate Blood Sugar Levels. Bananas May Improve Digestive Health. Bananas May Aid Weight Loss. Bananas May Support Heart Health. Bananas Contain Powerful Antioxidants. Bananas May Help You Feel More Full. Unripe Bananas May Improve Insulin Sensitivity. Bananas May Improve Kidney Health. Bananas May Have Benefits for Exercise. Bananas Are Easy to Add to Your Diet.",
+    "shelfLife": 3,
+    "storageInstructions": "Keep the bananas cool and dry, away from direct sunlight. Robustas are green when they are fresh and raw. When they ripen, they turn golden yellow. To identify ripened ones, look for brown speckles and golden skin.",
+    "countryOfOrigin": "India"
+  },
+  {
+    "id": 3,
+    "name": "apple",
+    "images": [
+      "/fruit-1.jpeg",
+      "/fruit-2.jpeg",
+      "/fruit-3.jpeg",
+      "/fruit-4.jpeg"
+    ],
+    "description": "Apples are a popular fruit with many research-backed health benefits. Learn about the top 10 reasons why apples are good for you. Apples Are Nutritious. Apples May Be Good for Weight Loss. Apples May Be Good for Your Heart. They're Linked to a Lower Risk of Diabetes. They May Have Prebiotic Effects and Promote Good Gut Bacteria. Substances in Apples May Help Prevent Cancer. Apples Contain Compounds That Can Help Fight Asthma. Apples May Be Good for Bone Health. Apples May Protect Against Stomach Injury From NSAIDs. Apples May Help Protect Your Brain. Apples May Help Protect Against Cancer. Apples Contain Compounds That Can Help Fight Asthma. Apples May Be Good for Bone Health. Apples May Protect Against Stomach Injury From NSAIDs. Apples May Help Protect Your Brain.",
+    "shelfLife": 5,
+    "storageInstructions": "Apples should be stored as cold as possible in the refrigerator. Whole apples should be placed in a plastic bag in the crisper of the refrigerator, away from vegetables. ... If you have leftover cut pieces of apple, sprinkle them with lemon juice to keep them from turning brown.",
+    "countryOfOrigin": "India"
+  },
+  {
+    "id": 4,
+    "name": "orange",
+    "images": [
+      "/fruit-1.jpeg",
+      "/fruit-2.jpeg",
+      "/fruit-3.jpeg",
+      "/fruit-4.jpeg"
+    ],
+    "description": "Oranges are juicy citrus fruits that are high in vitamin C. They are known for their sweet and tangy flavor.",
+    "shelfLife": 10,
+    "storageInstructions": "Oranges can be stored at room temperature for a few days. For longer storage, keep them in the refrigerator.",
+    "countryOfOrigin": "Spain"
+  },
+  {
+    "id": 5,
+    "name": "grapefruit",
+    "images": [
+      "/fruit-1.jpeg",
+      "/fruit-2.jpeg",
+      "/fruit-3.jpeg",
+      "/fruit-4.jpeg"
+    ],
+    "description": "Grapefruits are a tangy and refreshing citrus fruit known for their high vitamin C content. They come in pink, red, and white varieties.",
+    "shelfLife": 14,
+    "storageInstructions": "Grapefruits can be stored at room temperature for a few days or in the refrigerator for longer storage.",
+    "countryOfOrigin": "Florida, United States"
+  },
+  {
+    "id": 6,
+    "name": "strawberry",
+    "images": [
+      "/fruit-1.jpeg",
+      "/fruit-2.jpeg",
+      "/fruit-3.jpeg",
+      "/fruit-4.jpeg"
+    ],
+    "description": "Strawberries are sweet, red berries that are loved for their juicy texture and vibrant flavor. They are often used in desserts and salads.",
+    "shelfLife": 3,
+    "storageInstructions": "Store strawberries in the refrigerator and avoid washing them until you're ready to eat them.",
+    "countryOfOrigin": "United States"
+  },
+  {
+    "id": 7,
+    "name": "pineapple",
+    "images": [
+      "/fruit-1.jpeg",
+      "/fruit-2.jpeg",
+      "/fruit-3.jpeg",
+      "/fruit-4.jpeg"
+    ],
+    "description": "Pineapples are tropical fruits with a sweet and tangy taste. They have a tough outer skin and a juicy, fibrous interior.",
+    "shelfLife": 5,
+    "storageInstructions": "Pineapples should be stored at room temperature until ripe. Once ripe, refrigerate for a few days.",
+    "countryOfOrigin": "Costa Rica"
+  },
+  {
+    "id": 8,
+    "name": "pear",
+    "images": [
+      "/fruit-1.jpeg",
+      "/fruit-2.jpeg",
+      "/fruit-3.jpeg",
+      "/fruit-4.jpeg"
+    ],
+    "description": "Pears are a sweet and juicy fruit with a distinctive shape. They come in various colors and are often enjoyed fresh or in salads.",
+    "shelfLife": 7,
+    "storageInstructions": "Pears should be stored at room temperature until ripe. Once ripe, refrigerate to extend freshness.",
+    "countryOfOrigin": "Argentina"
+  },
+  {
+    "id": 9,
+    "name": "blueberry",
+    "images": [
+      "/fruit-1.jpeg",
+      "/fruit-2.jpeg",
+      "/fruit-3.jpeg",
+      "/fruit-4.jpeg"
+    ],
+    "description": "Blueberries are small, round berries known for their deep blue color and antioxidants. They are commonly used in baked goods and smoothies.",
+    "shelfLife": 5,
+    "storageInstructions": "Blueberries should be stored in the refrigerator and rinsed just before eating.",
+    "countryOfOrigin": "Canada"
+  },
+  {
+    "id": 10,
+    "name": "kiwi",
+    "images": [
+      "/fruit-1.jpeg",
+      "/fruit-2.jpeg",
+      "/fruit-3.jpeg",
+      "/fruit-4.jpeg"
+    ],
+    "description": "Kiwis are small, green fruits with a fuzzy exterior and vibrant green flesh. They are rich in vitamins and antioxidants.",
+    "shelfLife": 14,
+    "storageInstructions": "Kiwis should be stored at room temperature until ripe. Once ripe, refrigerate for longer freshness.",
+    "countryOfOrigin": "New Zealand"
+  },
+  {
+    "id": 11,
+    "name": "passion fruit",
+    "images": [
+      "/fruit-1.jpeg",
+      "/fruit-2.jpeg",
+      "/fruit-3.jpeg",
+      "/fruit-4.jpeg"
+    ],
+    "description": "Passion fruits are exotic fruits with a tough outer rind and a sweet, aromatic interior filled with seeds. They have a unique flavor.",
+    "shelfLife": 7,
+    "storageInstructions": "Passion fruits should be stored at room temperature until ripe. Once ripe, store in the refrigerator.",
+    "countryOfOrigin": "Brazil"
+  },
+  {
+    "id": 12,
+    "name": "peach",
+    "images": [
+      "/fruit-1.jpeg",
+      "/fruit-2.jpeg",
+      "/fruit-3.jpeg",
+      "/fruit-4.jpeg"
+    ],
+    "description": "Peaches are juicy stone fruits with a soft, fuzzy skin. They come in various colors and are known for their sweet and refreshing taste.",
+    "shelfLife": 5,
+    "storageInstructions": "Peaches should be stored at room temperature until ripe. Once ripe, refrigerate to keep them fresh.",
+    "countryOfOrigin": "Georgia, United States"
+  },
+  {
+    "id": 13,
+    "name": "coconut",
+    "images": [
+      "/fruit-1.jpeg",
+      "/fruit-2.jpeg",
+      "/fruit-3.jpeg",
+      "/fruit-4.jpeg"
+    ],
+    "description": "Coconuts are large tropical fruits with a hard outer shell and a sweet, watery interior. They are used for their water, flesh, and oil.",
+    "shelfLife": 30,
+    "storageInstructions": "Whole coconuts can be stored at room temperature for a short time. Once opened, store coconut meat in the refrigerator.",
+    "countryOfOrigin": "Thailand"
+  },
+  {
+    "id": 14,
+    "name": "fig",
+    "images": [
+      "/fruit-1.jpeg",
+      "/fruit-2.jpeg",
+      "/fruit-3.jpeg",
+      "/fruit-4.jpeg"
+    ],
+    "description": "Figs are sweet and chewy fruits with a soft skin and crunchy seeds. They are often enjoyed fresh or dried.",
+    "shelfLife": 3,
+    "storageInstructions": "Figs are delicate and should be stored in the refrigerator. Consume them within a few days for the best flavor.",
+    "countryOfOrigin": "Turkey"
+  },
+  {
+    "id": 15,
+    "name": "dragon fruit",
+    "images": [
+      "/fruit-1.jpeg",
+      "/fruit-2.jpeg",
+      "/fruit-3.jpeg",
+      "/fruit-4.jpeg"
+    ],
+    "description": "Dragon fruit, also known as pitaya, is a vibrant fruit with a unique appearance and a mildly sweet flavor. It comes in several varieties.",
+    "shelfLife": 7,
+    "storageInstructions": "Dragon fruit should be stored in the refrigerator. Slice it open and scoop out the flesh for consumption.",
+    "countryOfOrigin": "Vietnam"
+  },
+  {
+    "id": 16,
+    "name": "guava",
+    "images": [
+      "/fruit-1.jpeg",
+      "/fruit-2.jpeg",
+      "/fruit-3.jpeg",
+      "/fruit-4.jpeg"
+    ],
+    "description": "Guava is a tropical fruit with a strong fragrance and a sweet, tangy taste. It's rich in vitamins and dietary fiber.",
+    "shelfLife": 5,
+    "storageInstructions": "Guavas can be stored at room temperature until ripe. Once ripe, store them in the refrigerator.",
+    "countryOfOrigin": "Mexico"
+  },
+  {
+    "id": 17,
+    "name": "blackberry",
+    "images": [
+      "/fruit-1.jpeg",
+      "/fruit-2.jpeg",
+      "/fruit-3.jpeg",
+      "/fruit-4.jpeg"
+    ],
+    "description": "Blackberries are dark purple, juicy berries that are often used in desserts, jams, and smoothies. They are rich in antioxidants.",
+    "shelfLife": 3,
+    "storageInstructions": "Blackberries are delicate and should be stored in the refrigerator. Rinse them just before consuming.",
+    "countryOfOrigin": "United States"
+  }
+]
