@@ -19,3 +19,9 @@ https://stackoverflow.com/a/73843859
 https://app.quicktype.io/
 
 https://blog.kieranroberts.dev/how-to-setup-path-aliases-for-development-with-nextjs-and-jest
+
+https://mui.com/material-ui/react-use-media-query/#testing
+
+https://stackoverflow.com/questions/72747196/how-to-write-unit-test-cases-for-different-screen-sizes
+
+https://github.com/ericf/css-mediaquery
