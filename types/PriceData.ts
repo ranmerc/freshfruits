@@ -8,6 +8,7 @@ export interface Pack {
   quantity: number;
   price: number;
   discountPrice: number;
+  inStock: boolean;
 }
 
 export enum Type {
