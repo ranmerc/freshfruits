@@ -15,3 +15,7 @@ https://dev.to/ivandotv/using-next-js-link-component-with-material-ui-buttons-an
 https://stackoverflow.com/questions/64555625/type-for-material-ui-icons
 
 https://stackoverflow.com/a/73843859
+
+https://app.quicktype.io/
+
+https://blog.kieranroberts.dev/how-to-setup-path-aliases-for-development-with-nextjs-and-jest
