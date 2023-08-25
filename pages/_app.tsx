@@ -6,7 +6,7 @@ import CssBaseline from "@mui/material/CssBaseline";
 import { ThemeProvider } from "@mui/material/styles";
 import theme from "@/styles/theme";
 import Header from "@/components/Header";
-import { QueryClient, QueryClientProvider } from "react-query";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import CartDrawer from "@/components/CartDrawer";
 import { CacheProvider, EmotionCache } from "@emotion/react";
 import createEmotionCache from "@/utils/createEmotionCache";

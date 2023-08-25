@@ -19,15 +19,9 @@ describe("Logo Component", () => {
   test("Renders link to home", () => {
     render(<Logo />);
 
-    expect(screen.getByRole("link")).toHaveAttribute("href", "/");
-  });
-
-  test("Does not render logo text on mobile", () => {
-    // resizing to mobile viewport
-    // mobile -> <md ie <900px
-    resizeScreen(899);
-
-    render(<Logo />);
-    expect(screen.queryByRole("heading")).not.toBeInTheDocument();
+    expect(screen.getByRole("link", { name: "Home" })).toHaveAttribute(
+      "href",
+      "/"
+    );
   });
 });

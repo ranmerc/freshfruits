@@ -1,16 +1,17 @@
 import { ShoppingCart } from "@mui/icons-material";
-import IconLink from "../IconLink";
-import useMobile from "@/hooks/useMobile";
-import { Button, Typography } from "@mui/material";
+import { Box, Button, Typography } from "@mui/material";
 import Link from "next/link";
 
 export default function CartButton() {
-  const isMobile = useMobile();
-
   return (
     <>
-      {!isMobile && (
-        <Link href={"/cart"} passHref style={{ verticalAlign: "center" }}>
+      <Box display={{ xs: "none", md: "block" }}>
+        <Link
+          href={"/cart"}
+          passHref
+          style={{ verticalAlign: "center" }}
+          aria-label="Cart"
+        >
           <Button
             variant="contained"
             size="large"
@@ -22,7 +23,7 @@ export default function CartButton() {
             </Typography>
           </Button>
         </Link>
-      )}
+      </Box>
     </>
   );
 }
