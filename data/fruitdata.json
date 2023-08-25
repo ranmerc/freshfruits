@@ -16,12 +16,7 @@
   {
     "id": 2,
     "name": "banana",
-    "images": [
-      "/fruit-1.jpeg",
-      "/fruit-2.jpeg",
-      "/fruit-3.jpeg",
-      "/fruit-4.jpeg"
-    ],
+    "images": ["/fruit-3.jpeg", "/fruit-4.jpeg"],
     "description": "Bananas are extremely healthy and delicious. They contain several essential nutrients and provide benefits for digestion, heart health and weight loss. Aside from being very nutritious, they are also a highly convenient snack food. Here are 11 science-based health benefits of bananas. Bananas Contain Many Important Nutrients. Bananas Contain Nutrients That Moderate Blood Sugar Levels. Bananas May Improve Digestive Health. Bananas May Aid Weight Loss. Bananas May Support Heart Health. Bananas Contain Powerful Antioxidants. Bananas May Help You Feel More Full. Unripe Bananas May Improve Insulin Sensitivity. Bananas May Improve Kidney Health. Bananas May Have Benefits for Exercise. Bananas Are Easy to Add to Your Diet.",
     "shelfLife": 3,
     "storageInstructions": "Keep the bananas cool and dry, away from direct sunlight. Robustas are green when they are fresh and raw. When they ripen, they turn golden yellow. To identify ripened ones, look for brown speckles and golden skin.",
@@ -30,12 +25,7 @@
   {
     "id": 3,
     "name": "apple",
-    "images": [
-      "/fruit-1.jpeg",
-      "/fruit-2.jpeg",
-      "/fruit-3.jpeg",
-      "/fruit-4.jpeg"
-    ],
+    "images": ["/fruit-1.jpeg", "/fruit-3.jpeg", "/fruit-4.jpeg"],
     "description": "Apples are a popular fruit with many research-backed health benefits. Learn about the top 10 reasons why apples are good for you. Apples Are Nutritious. Apples May Be Good for Weight Loss. Apples May Be Good for Your Heart. They're Linked to a Lower Risk of Diabetes. They May Have Prebiotic Effects and Promote Good Gut Bacteria. Substances in Apples May Help Prevent Cancer. Apples Contain Compounds That Can Help Fight Asthma. Apples May Be Good for Bone Health. Apples May Protect Against Stomach Injury From NSAIDs. Apples May Help Protect Your Brain. Apples May Help Protect Against Cancer. Apples Contain Compounds That Can Help Fight Asthma. Apples May Be Good for Bone Health. Apples May Protect Against Stomach Injury From NSAIDs. Apples May Help Protect Your Brain.",
     "shelfLife": 5,
     "storageInstructions": "Apples should be stored as cold as possible in the refrigerator. Whole apples should be placed in a plastic bag in the crisper of the refrigerator, away from vegetables. ... If you have leftover cut pieces of apple, sprinkle them with lemon juice to keep them from turning brown.",
@@ -100,12 +90,7 @@
   {
     "id": 8,
     "name": "pear",
-    "images": [
-      "/fruit-1.jpeg",
-      "/fruit-2.jpeg",
-      "/fruit-3.jpeg",
-      "/fruit-4.jpeg"
-    ],
+    "images": ["/fruit-1.jpeg", "/fruit-2.jpeg", "/fruit-3.jpeg"],
     "description": "Pears are a sweet and juicy fruit with a distinctive shape. They come in various colors and are often enjoyed fresh or in salads.",
     "shelfLife": 7,
     "storageInstructions": "Pears should be stored at room temperature until ripe. Once ripe, refrigerate to extend freshness.",
@@ -184,12 +169,7 @@
   {
     "id": 14,
     "name": "fig",
-    "images": [
-      "/fruit-1.jpeg",
-      "/fruit-2.jpeg",
-      "/fruit-3.jpeg",
-      "/fruit-4.jpeg"
-    ],
+    "images": ["/fruit-1.jpeg", "/fruit-2.jpeg", "/fruit-4.jpeg"],
     "description": "Figs are sweet and chewy fruits with a soft skin and crunchy seeds. They are often enjoyed fresh or dried.",
     "shelfLife": 3,
     "storageInstructions": "Figs are delicate and should be stored in the refrigerator. Consume them within a few days for the best flavor.",
@@ -198,12 +178,7 @@
   {
     "id": 15,
     "name": "dragon fruit",
-    "images": [
-      "/fruit-1.jpeg",
-      "/fruit-2.jpeg",
-      "/fruit-3.jpeg",
-      "/fruit-4.jpeg"
-    ],
+    "images": ["/fruit-1.jpeg"],
     "description": "Dragon fruit, also known as pitaya, is a vibrant fruit with a unique appearance and a mildly sweet flavor. It comes in several varieties.",
     "shelfLife": 7,
     "storageInstructions": "Dragon fruit should be stored in the refrigerator. Slice it open and scoop out the flesh for consumption.",
@@ -226,12 +201,7 @@
   {
     "id": 17,
     "name": "blackberry",
-    "images": [
-      "/fruit-1.jpeg",
-      "/fruit-2.jpeg",
-      "/fruit-3.jpeg",
-      "/fruit-4.jpeg"
-    ],
+    "images": ["/fruit-1.jpeg", "/fruit-2.jpeg", "/fruit-4.jpeg"],
     "description": "Blackberries are dark purple, juicy berries that are often used in desserts, jams, and smoothies. They are rich in antioxidants.",
     "shelfLife": 3,
     "storageInstructions": "Blackberries are delicate and should be stored in the refrigerator. Rinse them just before consuming.",

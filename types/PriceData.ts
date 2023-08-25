@@ -4,14 +4,9 @@ export default interface PriceData {
 }
 
 export interface Pack {
-  type: Type;
+  type: "count" | "weight";
   quantity: number;
   price: number;
   discountPrice: number;
   inStock: boolean;
-}
-
-export enum Type {
-  Count = "count",
-  Weight = "weight",
 }
