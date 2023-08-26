@@ -7,6 +7,7 @@ import ImageCarousel from "@/components/ImageCarousel";
 import PriceContainer from "@/components/PackContainer";
 import AboutProduct from "@/components/AboutProduct";
 import Head from "next/head";
+import CartDrawer from "@/components/CartDrawer";
 
 export default function Page({
   fruitData,
@@ -41,6 +42,7 @@ export default function Page({
           </Grid>
         </Grid>
       </Grid>
+      <CartDrawer />
     </>
   );
 }

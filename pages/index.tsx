@@ -7,6 +7,7 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
 import { useUserContext } from "@/context/UserContext";
+import CartDrawer from "@/components/CartDrawer";
 
 export default function Index({ fruits }: { fruits: FruitData[] }) {
   const { username } = useUserContext();
@@ -30,6 +31,7 @@ export default function Index({ fruits }: { fruits: FruitData[] }) {
           </li>
         ))}
       </ul>
+      <CartDrawer />
     </>
   );
 }

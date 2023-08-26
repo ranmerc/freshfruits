@@ -7,10 +7,10 @@ import { ThemeProvider } from "@mui/material/styles";
 import theme from "@/styles/theme";
 import Header from "@/components/Header";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import CartDrawer from "@/components/CartDrawer";
 import { CacheProvider, EmotionCache } from "@emotion/react";
 import createEmotionCache from "@/utils/createEmotionCache";
 import { UserProvider } from "@/context/UserContext";
+import { CartProvider } from "@/context/CartContext";
 
 export interface MyAppProps extends AppProps {
   emotionCache?: EmotionCache;
@@ -33,9 +33,10 @@ export default function App({
           <CssBaseline />
           <QueryClientProvider client={queryClient}>
             <UserProvider>
-              <Header />
-              <Component {...pageProps} />
-              {/* <CartDrawer /> */}
+              <CartProvider>
+                <Header />
+                <Component {...pageProps} />
+              </CartProvider>
             </UserProvider>
           </QueryClientProvider>
         </ThemeProvider>
