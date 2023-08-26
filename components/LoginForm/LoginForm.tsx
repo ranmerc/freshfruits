@@ -6,15 +6,18 @@ import { Alert, Backdrop, CircularProgress, Snackbar } from "@mui/material";
 import useLogin from "@/hooks/useLogin";
 import { AccountCircle } from "@mui/icons-material";
 import Link from "next/link";
-
-export type FormValues = {
-  email: string;
-  password: string;
-};
+import { useEffect, useState } from "react";
+import { FormValues } from "@/types/LoginTypes";
+import axios from "axios";
 
 export default function LoginForm() {
-  const { isLoading, isError, mutateAsync } = useLogin();
+  const { isLoading, isError, error, mutateAsync } = useLogin();
   const { setUserName } = useUserContext();
+  const [showError, setShowError] = useState(isError);
+
+  useEffect(() => {
+    setShowError(isError);
+  }, [isError]);
 
   const handleLogin = async (
     values: FormValues,
@@ -87,11 +90,17 @@ export default function LoginForm() {
       </Backdrop>
       <Snackbar
         anchorOrigin={{ vertical: "top", horizontal: "center" }}
-        open={isError}
-        autoHideDuration={300}
+        open={showError}
+        autoHideDuration={3000}
+        onClose={() => {
+          setShowError(false);
+        }}
+        onClick={() => {
+          setShowError(false);
+        }}
       >
         <Alert severity="error" sx={{ width: "100%" }}>
-          Unable to login
+          {axios.isAxiosError(error) && error.response?.data?.message}
         </Alert>
       </Snackbar>
     </>
