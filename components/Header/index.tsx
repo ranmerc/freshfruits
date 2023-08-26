@@ -1,6 +1,7 @@
 import { AppBar, Stack } from "@mui/material";
 import Logo from "../Logo";
 import CartButton from "../CartButton";
+import UserAvatar from "../UserAvatar/UserAvatar";
 
 export default function Header() {
   return (
@@ -11,9 +12,18 @@ export default function Header() {
         alignItems={"center"}
         mx={{ xs: 2, md: 4 }}
         my={{ xs: 1, md: 2 }}
+        flexWrap={"wrap"}
       >
         <Logo />
-        <CartButton />
+        <Stack
+          direction={"row"}
+          alignItems={"center"}
+          flexWrap="wrap"
+          columnGap={2}
+        >
+          <CartButton />
+          <UserAvatar />
+        </Stack>
       </Stack>
     </AppBar>
   );

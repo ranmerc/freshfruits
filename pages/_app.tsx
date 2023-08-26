@@ -31,9 +31,9 @@ export default function App({
       <CacheProvider value={emotionCache}>
         <ThemeProvider theme={theme}>
           <CssBaseline />
-          <Header />
           <QueryClientProvider client={queryClient}>
             <UserProvider>
+              <Header />
               <Component {...pageProps} />
               {/* <CartDrawer /> */}
             </UserProvider>
