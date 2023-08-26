@@ -1,15 +1,15 @@
 import { useMutation } from "@tanstack/react-query";
 import axios, { AxiosResponse } from "axios";
-import { ErrorResponse, FormValues, SuccessResponse } from "@/types/LoginTypes";
+import { LoginFormValues, APIResponse } from "@/types/LoginTypes";
 
 const useLogin = () => {
   return useMutation({
-    mutationFn: async (values: FormValues) => {
+    mutationFn: async (values: LoginFormValues) => {
       const response = await axios.post<
-        FormValues,
-        AxiosResponse<SuccessResponse>
+        LoginFormValues,
+        AxiosResponse<APIResponse>
       >("/api/login", values);
-      return response.data.username;
+      return response.data.message;
     },
   });
 };

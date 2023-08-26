@@ -1,8 +1,4 @@
-export type SuccessResponse = {
-  username: string;
-};
-
-export type ErrorResponse = {
+export type APIResponse = {
   message: string;
 };
 
@@ -12,7 +8,13 @@ export type UserData = {
   password: string;
 };
 
-export type FormValues = {
+export type LoginFormValues = {
+  email: string;
+  password: string;
+};
+
+export type SignUpFormValues = {
+  username: string;
   email: string;
   password: string;
 };
