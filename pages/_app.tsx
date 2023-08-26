@@ -10,6 +10,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import CartDrawer from "@/components/CartDrawer";
 import { CacheProvider, EmotionCache } from "@emotion/react";
 import createEmotionCache from "@/utils/createEmotionCache";
+import { UserProvider } from "@/context/UserContext";
 
 export interface MyAppProps extends AppProps {
   emotionCache?: EmotionCache;
@@ -32,8 +33,10 @@ export default function App({
           <CssBaseline />
           <Header />
           <QueryClientProvider client={queryClient}>
-            <Component {...pageProps} />
-            {/* <CartDrawer /> */}
+            <UserProvider>
+              <Component {...pageProps} />
+              {/* <CartDrawer /> */}
+            </UserProvider>
           </QueryClientProvider>
         </ThemeProvider>
       </CacheProvider>

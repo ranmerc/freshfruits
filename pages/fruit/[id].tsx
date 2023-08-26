@@ -6,12 +6,19 @@ import { promises as fs } from "fs";
 import ImageCarousel from "@/components/ImageCarousel";
 import PriceContainer from "@/components/PackContainer";
 import AboutProduct from "@/components/AboutProduct";
+import Head from "next/head";
 
 export default function Page({
   fruitData,
 }: InferGetServerSidePropsType<typeof getServerSideProps>) {
   return (
     <>
+      <Head>
+        <title>
+          {fruitData.name.charAt(0).toUpperCase() + fruitData.name.slice(1)} -
+          Fresh Fruits
+        </title>
+      </Head>
       <Grid container sx={{ paddingX: 1, paddingY: 5 }} columnSpacing={6}>
         <Grid item xs={12} md={6} mb={{ xs: 4 }}>
           <ImageCarousel urls={fruitData.images} name={fruitData.name} />

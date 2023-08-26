@@ -7,7 +7,7 @@ let theme = responsiveFontSizes(
         main: "#4f9a30",
       },
       secondary: {
-        main: "#e44830",
+        main: "#F3B61F",
       },
       error: {
         main: "#F44336",
