@@ -4,7 +4,6 @@ import {
   useContext,
   ReactNode,
   useReducer,
-  Dispatch,
   useCallback,
 } from "react";
 import CartItem from "@/types/CartItemType";
@@ -52,7 +51,6 @@ export function useCartContext() {
 function cartReducer(state: CartItem[], action: ActionType) {
   switch (action.type) {
     case "ADD_TO_CART": {
-      console.log("added");
       const { fruitId, selectedPackId, quantity } = action.payload;
 
       const existingItemIndex = state.findIndex(

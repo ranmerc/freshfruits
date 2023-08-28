@@ -8,6 +8,7 @@ import PriceContainer from "@/components/PackContainer";
 import AboutProduct from "@/components/AboutProduct";
 import Head from "next/head";
 import CartDrawer from "@/components/CartDrawer";
+import Authorized from "@/components/Authorized";
 
 export default function Page({
   fruitData,
@@ -20,29 +21,31 @@ export default function Page({
           Fresh Fruits
         </title>
       </Head>
-      <Grid container sx={{ paddingX: 1, paddingY: 5 }} columnSpacing={6}>
-        <Grid item xs={12} md={6} mb={{ xs: 4 }}>
-          <ImageCarousel urls={fruitData.images} name={fruitData.name} />
+      <Authorized>
+        <Grid container sx={{ paddingX: 1, paddingY: 5 }} columnSpacing={6}>
+          <Grid item xs={12} md={6} mb={{ xs: 4 }}>
+            <ImageCarousel urls={fruitData.images} name={fruitData.name} />
+          </Grid>
+          <Grid item container xs={12} md={6}>
+            <Grid item xs={12} mb={{ xs: 3 }}>
+              <Typography
+                variant="h3"
+                component={"h1"}
+                sx={{ textTransform: "capitalize", fontWeight: "bold" }}
+              >
+                {fruitData.name}
+              </Typography>
+            </Grid>
+            <Grid item xs={12} mb={{ xs: 6 }}>
+              <PriceContainer id={fruitData.id} />
+            </Grid>
+            <Grid item xs={12}>
+              <AboutProduct fruitData={fruitData} />
+            </Grid>
+          </Grid>
         </Grid>
-        <Grid item container xs={12} md={6}>
-          <Grid item xs={12} mb={{ xs: 3 }}>
-            <Typography
-              variant="h3"
-              component={"h1"}
-              sx={{ textTransform: "capitalize", fontWeight: "bold" }}
-            >
-              {fruitData.name}
-            </Typography>
-          </Grid>
-          <Grid item xs={12} mb={{ xs: 6 }}>
-            <PriceContainer id={fruitData.id} />
-          </Grid>
-          <Grid item xs={12}>
-            <AboutProduct fruitData={fruitData} />
-          </Grid>
-        </Grid>
-      </Grid>
-      <CartDrawer />
+        <CartDrawer />
+      </Authorized>
     </>
   );
 }
