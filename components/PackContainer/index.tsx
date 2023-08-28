@@ -9,16 +9,31 @@ import {
 import PricePack from "../PricePack";
 import { ChangeEvent, useState } from "react";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
+import { useCartContext } from "@/context/CartContext";
+import AlertSnackbar from "../AlertSnackbar/AlertSnackbar";
 
 export default function PackContainer({ id }: { id: number }) {
   const { data, isLoading, isError, isSuccess } = useFetchPrice(id);
   const [selectedPack, setSelectedPack] = useState<number | null>(null);
+  const { addItemToCart } = useCartContext();
+  const [showSubmitMessage, setShowSubmitMessage] = useState(false);
 
   const handleChange: (
     event: ChangeEvent<HTMLInputElement>,
     checked: boolean
   ) => void = (e) => {
     setSelectedPack(Number(e.target.value));
+  };
+
+  const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    addItemToCart({
+      fruitId: id,
+      selectedPackId: selectedPack!,
+      quantity: 1,
+      pack: data?.packs[selectedPack!]!,
+    });
+    setShowSubmitMessage(true);
   };
 
   if (isLoading) {
@@ -43,12 +58,7 @@ export default function PackContainer({ id }: { id: number }) {
     return (
       <Stack
         component={"form"}
-        onSubmit={(e) => {
-          e.preventDefault();
-          if (selectedPack !== null) {
-            console.log(data.packs[selectedPack]);
-          }
-        }}
+        onSubmit={handleFormSubmit}
         rowGap={{ xs: 1, md: 2 }}
       >
         <Typography variant="body1" component={"h3"} fontWeight={"bold"}>
@@ -80,6 +90,13 @@ export default function PackContainer({ id }: { id: number }) {
         >
           Add to Cart
         </Button>
+        <AlertSnackbar
+          isOpen={showSubmitMessage}
+          severity="success"
+          message={"Added to cart!"}
+          setOpen={setShowSubmitMessage}
+          duration={2000}
+        />
       </Stack>
     );
   }

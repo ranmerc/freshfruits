@@ -5,10 +5,14 @@ export default function AlertSnackbar({
   isOpen,
   message,
   severity,
+  setOpen,
+  duration = 3000,
 }: {
   isOpen: boolean;
   message: ReactNode;
   severity: AlertProps["severity"];
+  setOpen?: (isOpen: boolean) => void;
+  duration?: number;
 }) {
   const [show, setShow] = useState(isOpen);
 
@@ -17,15 +21,16 @@ export default function AlertSnackbar({
   }, [isOpen]);
 
   const handleEvents = () => {
-    setShow(false);
+    if (setOpen) setOpen(false);
+    else setShow(false);
   };
 
   return (
     <>
       <Snackbar
         anchorOrigin={{ vertical: "top", horizontal: "center" }}
-        open={show}
-        autoHideDuration={3000}
+        open={setOpen ? isOpen : show}
+        autoHideDuration={duration}
         onClose={handleEvents}
         onClick={handleEvents}
       >
