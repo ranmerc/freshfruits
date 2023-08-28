@@ -6,6 +6,10 @@ https://tkdodo.eu/blog/testing-react-query
 
 https://klzns.github.io/how-to-use-type-script-and-jest-mocks
 
+https://www.benmvp.com/blog/sync-localstorage-react-usereducer-hook/
+
+https://github.com/facebook/react/issues/16295
+
 ## Troubleshooting
 
 https://amitd.co/blog/swc-jest-with-typescript-react-and-esm-modules

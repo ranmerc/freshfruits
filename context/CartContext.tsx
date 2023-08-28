@@ -7,7 +7,12 @@ import {
   Dispatch,
   useCallback,
 } from "react";
-import CartItem from "@/types/CartItem";
+import CartItem from "@/types/CartItemType";
+
+type RemoveCartItemPayload = {
+  fruitId: number;
+  selectedPackId: number;
+};
 
 type ActionType =
   | {
@@ -27,7 +32,9 @@ type ActionType =
 
 interface CartContextType {
   cartItems: CartItem[];
-  cartDispatch: Dispatch<ActionType>;
+  addItemToCart: (item: CartItem) => void;
+  removeItemFromCart: (item: RemoveCartItemPayload) => void;
+  clearCart: () => void;
 }
 
 const CartContext = createContext<CartContextType | undefined>(undefined);
@@ -45,6 +52,7 @@ export function useCartContext() {
 function cartReducer(state: CartItem[], action: ActionType) {
   switch (action.type) {
     case "ADD_TO_CART": {
+      console.log("added");
       const { fruitId, selectedPackId, quantity } = action.payload;
 
       const existingItemIndex = state.findIndex(
@@ -53,9 +61,14 @@ function cartReducer(state: CartItem[], action: ActionType) {
       );
 
       if (existingItemIndex !== -1) {
-        const newState = [...state];
-        newState[existingItemIndex].quantity += quantity;
-        return newState;
+        return [
+          ...state.slice(0, existingItemIndex),
+          {
+            ...state[existingItemIndex],
+            quantity: state[existingItemIndex].quantity + quantity,
+          },
+          ...state.slice(existingItemIndex + 1),
+        ];
       }
 
       return [...state, action.payload];
@@ -73,14 +86,21 @@ function cartReducer(state: CartItem[], action: ActionType) {
         return state;
       }
 
-      const newState = [...state];
-      newState[existingItemIndex].quantity -= 1;
-
-      if (newState[existingItemIndex].quantity === 0) {
-        newState.splice(existingItemIndex, 1);
+      if (state[existingItemIndex].quantity === 1) {
+        return [
+          ...state.slice(0, existingItemIndex),
+          ...state.slice(existingItemIndex + 1),
+        ];
       }
 
-      return newState;
+      return [
+        ...state.slice(0, existingItemIndex),
+        {
+          ...state[existingItemIndex],
+          quantity: state[existingItemIndex].quantity - 1,
+        },
+        ...state.slice(existingItemIndex + 1),
+      ];
     }
 
     case "CLEAR_CART":
@@ -109,8 +129,36 @@ export function CartProvider({ children }: { children: ReactNode }) {
 
   const [state, dispatch] = useReducer(reducerLocalStorage, savedCartItems);
 
+  const addItemToCart = useCallback(
+    (item: CartItem) => {
+      dispatch({
+        type: "ADD_TO_CART",
+        payload: item,
+      });
+    },
+    [dispatch]
+  );
+
+  const removeItemFromCart = useCallback(
+    (item: RemoveCartItemPayload) => {
+      dispatch({
+        type: "REMOVE_FROM_CART",
+        payload: item,
+      });
+    },
+    [dispatch]
+  );
+
+  const clearCart = useCallback(() => {
+    dispatch({
+      type: "CLEAR_CART",
+    });
+  }, [dispatch]);
+
   return (
-    <CartContext.Provider value={{ cartItems: state, cartDispatch: dispatch }}>
+    <CartContext.Provider
+      value={{ cartItems: state, addItemToCart, removeItemFromCart, clearCart }}
+    >
       {children}
     </CartContext.Provider>
   );
