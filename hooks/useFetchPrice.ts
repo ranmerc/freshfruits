@@ -9,7 +9,7 @@ const fetcher = async (id: number) => {
 
 export default function useFetchPrice(id: number) {
   return useQuery<PriceData>({
-    queryKey: ["fruit", id],
+    queryKey: ["price", id],
     queryFn: () => fetcher(id),
   });
 }
