@@ -76,14 +76,14 @@
         "quantity": 3,
         "price": 80,
         "discountPrice": 70,
-        "inStock": false
+        "inStock": true
       },
       {
         "type": "count",
         "quantity": 6,
         "price": 150,
         "discountPrice": 150,
-        "inStock": true
+        "inStock": false
       }
     ]
   },
@@ -202,14 +202,14 @@
         "quantity": 250,
         "price": 180,
         "discountPrice": 180,
-        "inStock": false
+        "inStock": true
       },
       {
         "type": "weight",
         "quantity": 500,
         "price": 340,
         "discountPrice": 306,
-        "inStock": true
+        "inStock": false
       }
     ]
   },

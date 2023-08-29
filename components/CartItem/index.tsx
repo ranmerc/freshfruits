@@ -121,7 +121,15 @@ export default function CartItem({ item }: { item: CartItemType }) {
                 </Typography>
               )}
             </Stack>
-            <Stack direction={"row"} alignItems={"center"}>
+            <Stack
+              direction={"row"}
+              alignItems={"center"}
+              sx={{
+                bgcolor: "secondary.main",
+                width: "fit-content",
+                borderRadius: 2,
+              }}
+            >
               <IconButton
                 aria-label="remove one item
                 "

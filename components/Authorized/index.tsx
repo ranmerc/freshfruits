@@ -12,5 +12,5 @@ export default function Authorized({ children }: { children: ReactNode }) {
     }
   }, [router, username]);
 
-  return <>{children};</>;
+  return <>{children}</>;
 }

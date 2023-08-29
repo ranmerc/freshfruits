@@ -2,7 +2,6 @@ import { Drawer, NoSsr, Stack, Typography } from "@mui/material";
 import Link from "next/link";
 import { ButtonBase, Box, Divider } from "@mui/material";
 import { ShoppingCart } from "@mui/icons-material";
-import { useCartContext } from "@/context/CartContext";
 import useCartValue from "@/hooks/useCartValue";
 import useCartItemCount from "@/hooks/useCartItemCount";
 
