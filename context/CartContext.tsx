@@ -29,14 +29,16 @@ type ActionType =
       type: "CLEAR_CART";
     };
 
-interface CartContextType {
+export interface CartContextType {
   cartItems: CartItem[];
   addItemToCart: (item: CartItem) => void;
   removeItemFromCart: (item: RemoveCartItemPayload) => void;
   clearCart: () => void;
 }
 
-const CartContext = createContext<CartContextType | undefined>(undefined);
+export const CartContext = createContext<CartContextType | undefined>(
+  undefined
+);
 
 export function useCartContext() {
   const context = useContext(CartContext);
