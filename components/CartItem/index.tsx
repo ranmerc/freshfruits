@@ -42,11 +42,11 @@ export default function CartItem({ item }: { item: CartItemType }) {
   };
 
   if (isLoading) {
-    <Alert severity="info">Loading item...</Alert>;
+    return <Alert severity="info">Loading item...</Alert>;
   }
 
   if (isError) {
-    <Alert severity="error">Error loading item!</Alert>;
+    return <Alert severity="error">Error loading item!</Alert>;
   }
 
   if (isSuccess && data && data.data) {
@@ -67,6 +67,7 @@ export default function CartItem({ item }: { item: CartItemType }) {
             height: 150,
           }}
           image={images[0]}
+          title={name}
         />
         <CardContent
           sx={{
