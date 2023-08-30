@@ -2,7 +2,7 @@ import axios from "axios";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import useSignUp from "@/hooks/useSignUp";
-import FormHead from "../FormHead/FormHead";
+import FormHead from "../FormHead";
 import { Field, Form, Formik } from "formik";
 import { PersonAdd } from "@mui/icons-material";
 import SignupSchema from "@/schemas/SignUpSchema";

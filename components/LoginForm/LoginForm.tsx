@@ -1,7 +1,7 @@
 import axios from "axios";
 import Link from "next/link";
 import useLogin from "@/hooks/useLogin";
-import FormHead from "../FormHead/FormHead";
+import FormHead from "../FormHead";
 import { Person } from "@mui/icons-material";
 import { Field, Form, Formik } from "formik";
 import LoginSchema from "@/schemas/LoginSchema";

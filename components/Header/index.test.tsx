@@ -1,7 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import Header from ".";
-import resizeScreen from "@/utils/resizeScreen";
 
 describe("Header Component", () => {
   test("Renders home link", () => {

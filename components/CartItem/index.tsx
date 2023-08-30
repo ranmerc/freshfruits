@@ -6,6 +6,7 @@ import {
   Typography,
   IconButton,
   Stack,
+  Alert,
 } from "@mui/material";
 import CartItem from "@/types/CartItemType";
 import { RemoveCircle, AddCircle } from "@mui/icons-material";
@@ -42,11 +43,11 @@ export default function CartItem({ item }: { item: CartItemType }) {
   };
 
   if (isLoading) {
-    <div>Loading...</div>;
+    <Alert severity="info">Loading item...</Alert>;
   }
 
   if (isError) {
-    <div>Error fetching fruit data!</div>;
+    <Alert severity="error">Error loading item!</Alert>;
   }
 
   if (isSuccess && data && data.data) {
