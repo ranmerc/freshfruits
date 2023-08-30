@@ -38,7 +38,7 @@
         "quantity": 250,
         "price": 100,
         "discountPrice": 100,
-        "inStock": true
+        "inStock": false
       },
       {
         "type": "weight",
@@ -140,7 +140,7 @@
         "quantity": 2,
         "price": 150,
         "discountPrice": 140,
-        "inStock": true
+        "inStock": false
       }
     ]
   },
@@ -171,7 +171,7 @@
         "quantity": 100,
         "price": 120,
         "discountPrice": 100,
-        "inStock": true
+        "inStock": false
       },
       {
         "type": "weight",

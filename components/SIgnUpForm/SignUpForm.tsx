@@ -1,6 +1,5 @@
 import axios from "axios";
 import Link from "next/link";
-import { useRouter } from "next/router";
 import useSignUp from "@/hooks/useSignUp";
 import FormHead from "../FormHead";
 import { Field, Form, Formik } from "formik";
@@ -12,7 +11,6 @@ import AlertSnackbar from "../AlertSnackbar/AlertSnackbar";
 import LoadingBackdrop from "../LoadingBackdrop/LoadingBackdrop";
 
 export default function SignUpForm() {
-  const router = useRouter();
   const { isSuccess, isLoading, isError, error, mutate } = useSignUp();
 
   const handleLogin = async (values: SignUpFormValues) => {

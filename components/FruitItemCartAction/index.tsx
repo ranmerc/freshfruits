@@ -1,10 +1,8 @@
 import { useCartContext } from "@/context/CartContext";
 import PriceData from "@/types/PriceData";
-import { AddCircle, RemoveCircle } from "@mui/icons-material";
 import {
   Button,
   FormControl,
-  IconButton,
   InputLabel,
   MenuItem,
   Select,
@@ -12,7 +10,8 @@ import {
   Typography,
 } from "@mui/material";
 import React, { useMemo } from "react";
-import calculateDiscount from "@/utils/calculateDiscount";
+import calculateDiscountPercentage from "@/utils/calculateDiscountPercentage";
+import Counter from "../Counter";
 
 export default function FruitItemCartAction({
   prices,
@@ -54,13 +53,14 @@ export default function FruitItemCartAction({
               textAlign: "center",
             }}
           >
-            {calculateDiscount(
+            {calculateDiscountPercentage(
               prices.packs[selectedPack].discountPrice,
               prices.packs[selectedPack].price
             )}{" "}
             % off
           </Typography>
         )}
+
         <FormControl fullWidth>
           <InputLabel id={`packs-for-${id}`}>Pack</InputLabel>
           <Select
@@ -72,16 +72,12 @@ export default function FruitItemCartAction({
               setSelectedPack(e.target.value as number);
             }}
           >
-            {prices.packs.map((pack, i) => {
-              if (pack.inStock) {
-                return (
-                  <MenuItem value={i} key={i}>
-                    {pack.quantity} {pack.type === "count" ? "Nos" : "gm"} for ₹
-                    {pack.discountPrice}
-                  </MenuItem>
-                );
-              }
-            })}
+            {prices.packs.map((pack, i) => (
+              <MenuItem value={i} key={i}>
+                {pack.quantity} {pack.type === "count" ? "Nos" : "gm"} for ₹
+                {pack.discountPrice}
+              </MenuItem>
+            ))}
           </Select>
         </FormControl>
 
@@ -95,30 +91,25 @@ export default function FruitItemCartAction({
               justifyContent: "space-around",
             }}
           >
-            <IconButton
-              onClick={() =>
+            <Counter
+              count={quantityInCart}
+              decrementLabel="Remove one item"
+              incrementLabel="Add one item"
+              onDecrement={() =>
                 removeItemFromCart({
                   fruitId: id,
                   selectedPackId: selectedPack,
                 })
               }
-              aria-label="Remove from Cart"
-            >
-              <RemoveCircle />
-            </IconButton>
-            <Typography fontSize={"1.2rem"}>{quantityInCart}</Typography>
-            <IconButton
-              onClick={() => addItemToCart(itemToBeAdded)}
-              aria-label="Add to Cart"
-            >
-              <AddCircle />
-            </IconButton>
+              onIncrement={() => addItemToCart(itemToBeAdded)}
+            />
           </Stack>
         ) : (
           <Button
             size="large"
             variant="outlined"
             onClick={() => addItemToCart(itemToBeAdded)}
+            disabled={!prices.packs[selectedPack].inStock}
           >
             Add
           </Button>

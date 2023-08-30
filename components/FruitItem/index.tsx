@@ -49,7 +49,7 @@ export default function FruitItem({ item }: { item: FruitData }) {
               variant="h4"
               fontWeight={"bold"}
               textTransform={"capitalize"}
-              sx={{ textAlign: "center", overflowX: "scroll" }}
+              sx={{ textAlign: "center" }}
             >
               {item.name}
             </Typography>

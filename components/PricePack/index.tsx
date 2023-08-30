@@ -1,11 +1,10 @@
 import { Box, Radio, Stack, Typography } from "@mui/material";
 import { Pack } from "@/types/PriceData";
 import { ChangeEvent } from "react";
+import calculateDiscountPercentage from "@/utils/calculateDiscountPercentage";
 
 function PackDetails({ info, selected }: { info: Pack; selected: boolean }) {
-  const discount = Math.abs(
-    Math.round(((info.price - info.discountPrice) / info.price) * 100)
-  );
+  const discount = calculateDiscountPercentage(info.discountPrice, info.price);
 
   return (
     <>

@@ -4,26 +4,25 @@ import {
   CardContent,
   CardMedia,
   Typography,
-  IconButton,
   Stack,
   Alert,
 } from "@mui/material";
 import CartItem from "@/types/CartItemType";
-import { RemoveCircle, AddCircle } from "@mui/icons-material";
 import CartItemType from "@/types/CartItemType";
 import { useCartContext } from "@/context/CartContext";
 import useFetchFruit from "@/hooks/useFetchFruit";
 import Link from "next/link";
+import calculateDiscountPercentage from "@/utils/calculateDiscountPercentage";
+import Counter from "../Counter";
 
 export default function CartItem({ item }: { item: CartItemType }) {
   const { data, isError, isSuccess, isLoading } = useFetchFruit(item.fruitId);
 
   const { addItemToCart, removeItemFromCart } = useCartContext();
 
-  const discount = Math.abs(
-    Math.round(
-      ((item.pack.price - item.pack.discountPrice) / item.pack.price) * 100
-    )
+  const discount = calculateDiscountPercentage(
+    item.pack.discountPrice,
+    item.pack.price
   );
 
   const handleIncreaseQuantity = () => {
@@ -131,21 +130,14 @@ export default function CartItem({ item }: { item: CartItemType }) {
                 borderRadius: 2,
               }}
             >
-              <IconButton
-                aria-label="remove one item
-                "
-                onClick={handleDecreaseQuantity}
-              >
-                <RemoveCircle />
-              </IconButton>
-              <Typography fontSize={"1.3rem"}>{item.quantity}</Typography>
-              <IconButton
-                aria-label="add one more item"
-                onClick={handleIncreaseQuantity}
-                disabled={!item.pack.inStock}
-              >
-                <AddCircle />
-              </IconButton>
+              <Counter
+                count={item.quantity}
+                decrementLabel="Remove one item"
+                incrementLabel="Add one item"
+                onDecrement={handleDecreaseQuantity}
+                onIncrement={handleIncreaseQuantity}
+                incrementDisabled={!item.pack.inStock}
+              />
             </Stack>
           </Stack>
 
