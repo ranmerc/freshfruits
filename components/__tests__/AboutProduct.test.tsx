@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
-import AboutProduct from ".";
+import AboutProduct from "../AboutProduct";
 import FruitData from "@/types/FruitData";
 
 const fruitData: FruitData = {
@@ -14,7 +14,7 @@ const fruitData: FruitData = {
 };
 
 describe("About Product Component", () => {
-  test("Renders heading", () => {
+  it("Renders heading", () => {
     render(<AboutProduct fruitData={fruitData} />);
 
     expect(
@@ -22,7 +22,7 @@ describe("About Product Component", () => {
     ).toBeInTheDocument();
   });
 
-  test("Renders description", () => {
+  it("Renders description", () => {
     render(<AboutProduct fruitData={fruitData} />);
 
     expect(
@@ -32,7 +32,7 @@ describe("About Product Component", () => {
     expect(screen.getByText(fruitData.description)).toBeInTheDocument();
   });
 
-  test("Renders shelf life", () => {
+  it("Renders shelf life", () => {
     render(<AboutProduct fruitData={fruitData} />);
 
     expect(
@@ -42,7 +42,7 @@ describe("About Product Component", () => {
     expect(screen.getByText(`${fruitData.shelfLife} days`)).toBeInTheDocument();
   });
 
-  test("Renders storage instructions", () => {
+  it("Renders storage instructions", () => {
     render(<AboutProduct fruitData={fruitData} />);
 
     expect(
@@ -52,7 +52,7 @@ describe("About Product Component", () => {
     expect(screen.getByText(fruitData.storageInstructions)).toBeInTheDocument();
   });
 
-  test("Renders country of origin", () => {
+  it("Renders country of origin", () => {
     render(<AboutProduct fruitData={fruitData} />);
 
     expect(
