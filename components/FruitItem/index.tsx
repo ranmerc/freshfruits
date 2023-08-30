@@ -31,7 +31,7 @@ export default function FruitItem({ item }: { item: FruitData }) {
 
   return (
     <>
-      <Card sx={{ maxWidth: 210, p: 2 }}>
+      <Card sx={{ p: 2, height: "100%" }}>
         <Link
           href={`/fruit/${item.id}`}
           style={{
@@ -49,7 +49,7 @@ export default function FruitItem({ item }: { item: FruitData }) {
               variant="h4"
               fontWeight={"bold"}
               textTransform={"capitalize"}
-              sx={{ textAlign: "center" }}
+              sx={{ textAlign: "center", overflowX: "scroll" }}
             >
               {item.name}
             </Typography>

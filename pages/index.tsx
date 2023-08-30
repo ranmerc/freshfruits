@@ -70,7 +70,7 @@ export default function Index({
           <Divider sx={{ my: 5 }} variant="fullWidth" />
           <Grid container spacing={3}>
             {sortedFruits.map((item) => (
-              <Grid item key={item.id}>
+              <Grid item xs={12} sm={4} md={3} key={item.id}>
                 <FruitItem item={item} />
               </Grid>
             ))}

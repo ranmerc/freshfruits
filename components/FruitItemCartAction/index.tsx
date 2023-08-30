@@ -42,7 +42,7 @@ export default function FruitItemCartAction({
 
   return (
     <>
-      <Stack rowGap={2}>
+      <Stack rowGap={2} width={"100%"}>
         {prices.packs[selectedPack].price !==
           prices.packs[selectedPack].discountPrice && (
           <Typography
