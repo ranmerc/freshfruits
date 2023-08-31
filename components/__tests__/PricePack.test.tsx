@@ -2,11 +2,12 @@ import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import { Pack } from "@/types/PriceData";
 import PricePack from "../PricePack";
+import renderer from "react-test-renderer";
 
 describe("PricePack component", () => {
   describe("Renders correct pack details", () => {
     describe("Renders correct discount", () => {
-      test("Fixed Price", () => {
+      it("Fixed Price", () => {
         const info: Pack = {
           type: "count",
           quantity: 4,
@@ -14,14 +15,21 @@ describe("PricePack component", () => {
           price: 200,
           discountPrice: 200,
         };
-        render(
+
+        const component = (
           <PricePack info={info} onChange={jest.fn()} packId={1} selected={1} />
         );
 
+        render(component);
+
         expect(screen.getByText(/fixed price/i)).toBeInTheDocument();
+
+        const tree = renderer.create(component).toJSON();
+
+        expect(tree).toMatchSnapshot();
       });
 
-      test("Discount is 10%", () => {
+      it("Discount is 10%", () => {
         const info: Pack = {
           type: "count",
           quantity: 4,
@@ -29,15 +37,23 @@ describe("PricePack component", () => {
           price: 200,
           discountPrice: 180,
         };
-        render(
+
+        const component = (
           <PricePack info={info} onChange={jest.fn()} packId={1} selected={1} />
         );
 
+        render(component);
+
         expect(screen.getByText(/10% off/i)).toBeInTheDocument();
+
+        const tree = renderer.create(component).toJSON();
+
+        expect(tree).toMatchSnapshot();
       });
     });
+
     describe("Renders correct price", () => {
-      test("Price on discount", () => {
+      it("Price on discount", () => {
         const info: Pack = {
           type: "count",
           quantity: 4,
@@ -45,18 +61,25 @@ describe("PricePack component", () => {
           price: 150,
           discountPrice: 120,
         };
-        render(
+
+        const component = (
           <PricePack info={info} onChange={jest.fn()} packId={1} selected={1} />
         );
+
+        render(component);
 
         expect(screen.getByText(/₹120/i)).toBeInTheDocument();
         expect(screen.getByText(/₹150/i)).toBeInTheDocument();
         expect(screen.getByText(/₹150/i)).toHaveStyle(
           "text-decoration: line-through"
         );
+
+        const tree = renderer.create(component).toJSON();
+
+        expect(tree).toMatchSnapshot();
       });
 
-      test("Fixed price", () => {
+      it("Fixed price", () => {
         const info: Pack = {
           type: "count",
           quantity: 4,
@@ -64,18 +87,26 @@ describe("PricePack component", () => {
           price: 150,
           discountPrice: 150,
         };
-        render(
+
+        const component = (
           <PricePack info={info} onChange={jest.fn()} packId={1} selected={1} />
         );
+
+        render(component);
 
         expect(screen.getByText(/₹150/i)).toBeInTheDocument();
         expect(screen.getByText(/₹150/i)).not.toHaveStyle(
           "text-decoration: line-through"
         );
+
+        const tree = renderer.create(component).toJSON();
+
+        expect(tree).toMatchSnapshot();
       });
     });
+
     describe("Renders correct Quantity", () => {
-      test("Renders count", () => {
+      it("Renders count", () => {
         const info: Pack = {
           type: "count",
           quantity: 6,
@@ -83,14 +114,21 @@ describe("PricePack component", () => {
           price: 150,
           discountPrice: 120,
         };
-        render(
+
+        const component = (
           <PricePack info={info} onChange={jest.fn()} packId={1} selected={1} />
         );
 
+        render(component);
+
         expect(screen.getByText(/6 Nos/i)).toBeInTheDocument();
+
+        const tree = renderer.create(component).toJSON();
+
+        expect(tree).toMatchSnapshot();
       });
 
-      test("Renders weight", () => {
+      it("Renders weight", () => {
         const info: Pack = {
           type: "weight",
           quantity: 300,
@@ -98,14 +136,21 @@ describe("PricePack component", () => {
           price: 150,
           discountPrice: 120,
         };
-        render(
+
+        const component = (
           <PricePack info={info} onChange={jest.fn()} packId={1} selected={1} />
         );
 
+        render(component);
+
         expect(screen.getByText(/300 g/i)).toBeInTheDocument();
+
+        const tree = renderer.create(component).toJSON();
+
+        expect(tree).toMatchSnapshot();
       });
     });
-    test("Out of stock", () => {
+    it("Out of stock", () => {
       const info: Pack = {
         type: "count",
         quantity: 4,
@@ -113,16 +158,23 @@ describe("PricePack component", () => {
         price: 200,
         discountPrice: 180,
       };
-      render(
+
+      const component = (
         <PricePack info={info} onChange={jest.fn()} packId={1} selected={1} />
       );
 
+      render(component);
+
       expect(screen.getByText(/out of stock/i)).toBeInTheDocument();
+
+      const tree = renderer.create(component).toJSON();
+
+      expect(tree).toMatchSnapshot();
     });
   });
 
   describe("Functions correctly", () => {
-    test("Disabled when no stock", async () => {
+    it("Disabled when no stock", async () => {
       const info: Pack = {
         type: "count",
         quantity: 4,

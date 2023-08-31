@@ -2,6 +2,7 @@ import { screen, render } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import FruitItemCartAction from "../FruitItemCartAction";
 import { useCartContext } from "@/context/CartContext";
+import renderer from "react-test-renderer";
 
 jest.mock("@/context/CartContext");
 
@@ -15,7 +16,7 @@ describe("FruitItemCartAction component", () => {
       removeItemFromCart: jest.fn(),
     });
 
-    render(
+    const component = (
       <FruitItemCartAction
         prices={{
           id: 1,
@@ -40,12 +41,18 @@ describe("FruitItemCartAction component", () => {
       />
     );
 
+    render(component);
+
     // Discount percentage
     expect(screen.getByText(/10 % off/i)).toBeInTheDocument();
 
     expect(screen.getByText(/1 Nos for ₹90/i)).toBeInTheDocument();
 
     expect(screen.getByRole("button", { name: "Add" })).toBeInTheDocument();
+
+    const tree = renderer.create(component).toJSON();
+
+    expect(tree).toMatchSnapshot();
   });
 
   it("Renders correct price details - 2", () => {
@@ -68,7 +75,7 @@ describe("FruitItemCartAction component", () => {
       removeItemFromCart: jest.fn(),
     });
 
-    render(
+    const component = (
       <FruitItemCartAction
         prices={{
           id: 1,
@@ -93,6 +100,8 @@ describe("FruitItemCartAction component", () => {
       />
     );
 
+    render(component);
+
     expect(screen.getByText(/25 % off/i)).toBeInTheDocument();
 
     expect(screen.getByText(/6 Nos for ₹300/i)).toBeInTheDocument();
@@ -100,5 +109,9 @@ describe("FruitItemCartAction component", () => {
     expect(
       screen.queryByRole("button", { name: "Add" })
     ).not.toBeInTheDocument();
+
+    const tree = renderer.create(component).toJSON();
+
+    expect(tree).toMatchSnapshot();
   });
 });

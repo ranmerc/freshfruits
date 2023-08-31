@@ -2,29 +2,16 @@ import { screen, render } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import CartItem from "../CartItem";
 import useFetchFruit from "@/hooks/useFetchFruit";
-import { ReactNode } from "react";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { useCartContext } from "@/context/CartContext";
 import CartItemType from "@/types/CartItemType";
 import userEvent from "@testing-library/user-event";
+import renderer from "react-test-renderer";
 
 jest.mock("@/hooks/useFetchFruit");
 jest.mock("@/context/CartContext");
 
-const queryClient = new QueryClient({
-  defaultOptions: {
-    queries: {
-      retry: false,
-    },
-  },
-});
-
 const mockedUseFetchFruit = useFetchFruit as jest.Mock;
 const mockedUseCartContext = useCartContext as jest.Mock;
-
-const wrapper = ({ children }: { children: ReactNode }) => (
-  <QueryClientProvider client={queryClient}>{children}</QueryClientProvider>
-);
 
 const cartItemValue = (details: Partial<CartItemType>): CartItemType => {
   return {
@@ -55,11 +42,15 @@ describe("CartItem component", () => {
       removeItemFromCart: jest.fn(),
     });
 
-    render(<CartItem item={cartItemValue({})} />, {
-      wrapper: wrapper,
-    });
+    render(<CartItem item={cartItemValue({})} />);
 
     expect(screen.getByText("Loading item...")).toBeInTheDocument();
+
+    const tree = renderer
+      .create(<CartItem item={cartItemValue({})} />)
+      .toJSON();
+
+    expect(tree).toMatchSnapshot();
   });
 
   it("Renders error state", () => {
@@ -77,11 +68,15 @@ describe("CartItem component", () => {
       removeItemFromCart: removeFunction,
     });
 
-    render(<CartItem item={cartItemValue({})} />, {
-      wrapper: wrapper,
-    });
+    render(<CartItem item={cartItemValue({})} />);
 
     expect(screen.getByText("Error loading item!")).toBeInTheDocument();
+
+    const tree = renderer
+      .create(<CartItem item={cartItemValue({})} />)
+      .toJSON();
+
+    expect(tree).toMatchSnapshot();
   });
 
   it("Renders correct fruit details - 1", () => {
@@ -114,10 +109,7 @@ describe("CartItem component", () => {
             type: "count",
           },
         })}
-      />,
-      {
-        wrapper: wrapper,
-      }
+      />
     );
 
     // image
@@ -151,6 +143,12 @@ describe("CartItem component", () => {
     expect(screen.getByText(/₹10/i)).toHaveStyle(
       "text-decoration: line-through"
     );
+
+    const tree = renderer
+      .create(<CartItem item={cartItemValue({})} />)
+      .toJSON();
+
+    expect(tree).toMatchSnapshot();
   });
 
   it("Renders correct fruit details - 2", () => {
@@ -184,10 +182,7 @@ describe("CartItem component", () => {
           },
           quantity: 4,
         })}
-      />,
-      {
-        wrapper: wrapper,
-      }
+      />
     );
 
     // image
@@ -224,6 +219,12 @@ describe("CartItem component", () => {
     expect(screen.getByText(/₹220/i)).toHaveStyle(
       "text-decoration: line-through"
     );
+
+    const tree = renderer
+      .create(<CartItem item={cartItemValue({})} />)
+      .toJSON();
+
+    expect(tree).toMatchSnapshot();
   });
 
   it("Functions correctly", async () => {
@@ -259,10 +260,7 @@ describe("CartItem component", () => {
           },
           quantity: 4,
         })}
-      />,
-      {
-        wrapper: wrapper,
-      }
+      />
     );
 
     const incrementButton = screen.getByRole("button", {

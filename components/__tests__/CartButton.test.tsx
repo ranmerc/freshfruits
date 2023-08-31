@@ -1,10 +1,10 @@
 import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import CartButton from "../CartButton";
-import { ReactNode } from "react";
 import router from "next/router";
-import * as UserContext from "@/context/UserContext";
-import * as CartContext from "@/context/CartContext";
+import { useUserContext } from "@/context/UserContext";
+import { useCartContext } from "@/context/CartContext";
+import renderer from "react-test-renderer";
 
 jest.mock("next/router", () => ({
   useRouter: jest.fn(() => ({
@@ -12,47 +12,33 @@ jest.mock("next/router", () => ({
   })),
 }));
 
-jest.mock("@/context/UserContext", () => {
-  const originalModule = jest.requireActual("@/context/UserContext");
+jest.mock("@/context/UserContext");
+jest.mock("@/context/CartContext");
 
-  return {
-    __esModule: true,
-    ...originalModule,
-    useUserContext: jest.fn(() => ({
-      username: "test",
-    })),
-  };
+const mockedUseUserContext = useUserContext as jest.Mock;
+const mockedUseCartContext = useCartContext as jest.Mock;
+
+mockedUseCartContext.mockReturnValue({
+  cartItems: [
+    {
+      quantity: 4,
+    },
+  ],
 });
 
-jest.mock("@/context/CartContext", () => {
-  const originalModule = jest.requireActual("@/context/CartContext");
-
-  return {
-    __esModule: true,
-    ...originalModule,
-    useCartContext: () => ({
-      cartItems: [
-        {
-          quantity: 4,
-        },
-      ],
-    }),
-  };
+mockedUseUserContext.mockReturnValue({
+  username: "test",
 });
-
-const CustomContainer = ({ children }: { children: ReactNode }) => {
-  return (
-    <UserContext.UserProvider>
-      <CartContext.CartProvider>{children}</CartContext.CartProvider>
-    </UserContext.UserProvider>
-  );
-};
 
 describe("Cart Button Component", () => {
+  it("Renders correctly", () => {
+    const tree = renderer.create(<CartButton />).toJSON();
+
+    expect(tree).toMatchSnapshot();
+  });
+
   it("Renders SVG logo", () => {
-    render(<CartButton />, {
-      wrapper: CustomContainer,
-    });
+    render(<CartButton />);
 
     expect(screen.getByTestId("ShoppingCartIcon")).toBeInTheDocument();
   });

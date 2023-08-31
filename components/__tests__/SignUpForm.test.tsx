@@ -5,6 +5,7 @@ import useSignUp from "@/hooks/useSignUp";
 import { useUserContext } from "@/context/UserContext";
 import { fireEvent } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
+import renderer from "react-test-renderer";
 
 jest.mock("@/hooks/useSignUp");
 jest.mock("@/context/UserContext");
@@ -26,6 +27,12 @@ mockedUseUserContext.mockReturnValue({
 describe("SignUpForm component", () => {
   beforeEach(() => {
     jest.spyOn(console, "error").mockImplementation(() => {});
+  });
+
+  it("Renders correctly", () => {
+    const tree = renderer.create(<SignUpForm />).toJSON();
+
+    expect(tree).toMatchSnapshot();
   });
 
   it("Renders form heading", () => {

@@ -2,6 +2,7 @@ import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import AboutProduct from "../AboutProduct";
 import FruitData from "@/types/FruitData";
+import renderer from "react-test-renderer";
 
 const fruitData: FruitData = {
   id: 1,
@@ -14,6 +15,14 @@ const fruitData: FruitData = {
 };
 
 describe("About Product Component", () => {
+  it("Renders correctly", () => {
+    const tree = renderer
+      .create(<AboutProduct fruitData={fruitData} />)
+      .toJSON();
+
+    expect(tree).toMatchSnapshot();
+  });
+
   it("Renders heading", () => {
     render(<AboutProduct fruitData={fruitData} />);
 

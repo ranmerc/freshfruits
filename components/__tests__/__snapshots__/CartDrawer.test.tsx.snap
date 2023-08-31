@@ -1,0 +1,93 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Cart Drawer Component Does not render when cart is empty 1`] = `null`;
+
+exports[`Cart Drawer Component Renders correctly when cart is not empty 1`] = `
+<div
+  className="MuiDrawer-root MuiDrawer-docked css-1ybh3ib-MuiDrawer-docked"
+>
+  <div
+    className="MuiPaper-root MuiPaper-elevation MuiPaper-elevation0 MuiDrawer-paper MuiDrawer-paperAnchorBottom MuiDrawer-paperAnchorDockedBottom css-1ic0da0-MuiPaper-root-MuiDrawer-paper"
+  >
+    <div
+      className="MuiBox-root css-19midj6"
+    >
+      <a
+        href="/cart"
+        onClick={[Function]}
+        onMouseEnter={[Function]}
+        onTouchStart={[Function]}
+        style={
+          {
+            "color": "inherit",
+            "textDecoration": "none",
+          }
+        }
+      >
+        <button
+          className="MuiButtonBase-root css-yb6dg2-MuiButtonBase-root"
+          disabled={false}
+          onBlur={[Function]}
+          onContextMenu={[Function]}
+          onDragLeave={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          tabIndex={0}
+          type="button"
+        >
+          <div
+            className="MuiStack-root css-1afutji-MuiStack-root"
+          >
+            <div
+              className="MuiStack-root css-niqf4j-MuiStack-root"
+            >
+              <p
+                className="MuiTypography-root MuiTypography-body1 css-ahj2mt-MuiTypography-root"
+              >
+                3
+                 items
+              </p>
+              <hr
+                className="MuiDivider-root MuiDivider-middle MuiDivider-vertical MuiDivider-flexItem css-16bghm4-MuiDivider-root"
+              />
+              <p
+                className="MuiTypography-root MuiTypography-body1 css-ahj2mt-MuiTypography-root"
+              >
+                ₹
+                90
+              </p>
+            </div>
+            <div
+              className="MuiStack-root css-69ywkl-MuiStack-root"
+            >
+              <svg
+                aria-hidden={true}
+                className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                data-testid="ShoppingCartIcon"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"
+                />
+              </svg>
+              <p
+                className="MuiTypography-root MuiTypography-body1 css-ahj2mt-MuiTypography-root"
+              >
+                View Cart
+              </p>
+            </div>
+          </div>
+        </button>
+      </a>
+    </div>
+  </div>
+</div>
+`;

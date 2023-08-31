@@ -1,0 +1,74 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`About Product Component Renders correctly 1`] = `
+<div
+  className="MuiBox-root css-0"
+>
+  <h2
+    className="MuiTypography-root MuiTypography-h5 css-79feuo-MuiTypography-root"
+  >
+    Fruit Details
+  </h2>
+  <div
+    className="MuiStack-root css-jfdv4h-MuiStack-root"
+  >
+    <div
+      className="MuiBox-root css-0"
+    >
+      <h3
+        className="MuiTypography-root MuiTypography-body1 css-ndaqpv-MuiTypography-root"
+      >
+        Description
+      </h3>
+      <p
+        className="MuiTypography-root MuiTypography-body2 css-e784if-MuiTypography-root"
+      >
+        This is a delicious fruit
+      </p>
+    </div>
+    <div
+      className="MuiBox-root css-0"
+    >
+      <h3
+        className="MuiTypography-root MuiTypography-body1 css-ndaqpv-MuiTypography-root"
+      >
+        Shelf Life
+      </h3>
+      <p
+        className="MuiTypography-root MuiTypography-body2 css-e784if-MuiTypography-root"
+      >
+        4
+         days
+      </p>
+    </div>
+    <div
+      className="MuiBox-root css-0"
+    >
+      <h3
+        className="MuiTypography-root MuiTypography-body1 css-ndaqpv-MuiTypography-root"
+      >
+        Storage Instructions
+      </h3>
+      <p
+        className="MuiTypography-root MuiTypography-body2 css-e784if-MuiTypography-root"
+      >
+        Store in cool dry place
+      </p>
+    </div>
+    <div
+      className="MuiBox-root css-0"
+    >
+      <h3
+        className="MuiTypography-root MuiTypography-body1 css-ndaqpv-MuiTypography-root"
+      >
+        Country of Origin
+      </h3>
+      <p
+        className="MuiTypography-root MuiTypography-body2 css-e784if-MuiTypography-root"
+      >
+        India
+      </p>
+    </div>
+  </div>
+</div>
+`;

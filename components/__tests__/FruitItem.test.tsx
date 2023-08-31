@@ -3,6 +3,7 @@ import "@testing-library/jest-dom";
 import FruitItem from "../FruitItem";
 import useFetchPrice from "@/hooks/useFetchPrice";
 import FruitItemCartAction from "../FruitItemCartAction";
+import renderer from "react-test-renderer";
 
 jest.mock("@/hooks/useFetchPrice");
 jest.mock("@/components/FruitItemCartAction", () => {
@@ -22,7 +23,7 @@ describe("FruitItem component", () => {
       data: null,
     });
 
-    render(
+    const component = (
       <FruitItem
         item={{
           countryOfOrigin: "India",
@@ -36,7 +37,13 @@ describe("FruitItem component", () => {
       />
     );
 
+    render(component);
+
     expect(screen.getByRole("alert")).toHaveTextContent("Loading prices...");
+
+    const tree = renderer.create(component).toJSON();
+
+    expect(tree).toMatchSnapshot();
   });
 
   it("Renders error state", () => {
@@ -47,7 +54,7 @@ describe("FruitItem component", () => {
       data: null,
     });
 
-    render(
+    const component = (
       <FruitItem
         item={{
           countryOfOrigin: "India",
@@ -61,9 +68,15 @@ describe("FruitItem component", () => {
       />
     );
 
+    render(component);
+
     expect(screen.getByRole("alert")).toHaveTextContent(
       "Error fetching price data for Fruit Name"
     );
+
+    const tree = renderer.create(component).toJSON();
+
+    expect(tree).toMatchSnapshot();
   });
 
   it("Renders correct fruit details", () => {
@@ -77,7 +90,7 @@ describe("FruitItem component", () => {
       },
     });
 
-    render(
+    const component = (
       <FruitItem
         item={{
           countryOfOrigin: "India",
@@ -91,6 +104,8 @@ describe("FruitItem component", () => {
       />
     );
 
+    render(component);
+
     expect(
       screen.getByRole("link", {
         name: "Fruit Name",
@@ -102,5 +117,8 @@ describe("FruitItem component", () => {
     ).toBeInTheDocument();
 
     expect(screen.getByRole("heading", { name: "Fruit Name" }));
+
+    const tree = renderer.create(component).toJSON();
+    expect(tree).toMatchSnapshot();
   });
 });

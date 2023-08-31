@@ -1,26 +1,13 @@
 import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import PackContainer from "../PackContainer";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import useFetchPrice from "@/hooks/useFetchPrice";
-import { ReactNode } from "react";
 import { useCartContext } from "@/context/CartContext";
+import renderer from "react-test-renderer";
 
 // telling jest to load the mock implementation from __mocks__
 jest.mock("@/hooks/useFetchPrice");
 jest.mock("@/context/CartContext");
-
-const queryClient = new QueryClient({
-  defaultOptions: {
-    queries: {
-      retry: false,
-    },
-  },
-});
-
-const wrapper = ({ children }: { children: ReactNode }) => (
-  <QueryClientProvider client={queryClient}>{children}</QueryClientProvider>
-);
 
 // satisfying ts error no mockImplementation
 const mocked = useFetchPrice as jest.Mock;
@@ -38,11 +25,15 @@ describe("Pack container", () => {
       isSuccess: false,
     }));
 
-    render(<PackContainer id={1} />, { wrapper });
+    render(<PackContainer id={1} />);
 
     expect(
       screen.getByRole("progressbar", { name: "Loading prices" })
     ).toBeInTheDocument();
+
+    const tree = renderer.create(<PackContainer id={1} />).toJSON();
+
+    expect(tree).toMatchSnapshot();
   });
 
   it("Renders error view", () => {
@@ -52,10 +43,14 @@ describe("Pack container", () => {
       data: null,
       isSuccess: false,
     }));
-    render(<PackContainer id={1} />, { wrapper });
+    render(<PackContainer id={1} />);
 
     expect(screen.getByRole("alert")).toBeInTheDocument();
     expect(screen.getByText("Unable to load prices!")).toBeInTheDocument();
+
+    const tree = renderer.create(<PackContainer id={1} />).toJSON();
+
+    expect(tree).toMatchSnapshot();
   });
 
   it("Renders heading", () => {
@@ -118,5 +113,9 @@ describe("Pack container", () => {
 
     const radios = screen.getAllByRole("radio");
     expect(radios).toHaveLength(2);
+
+    const tree = renderer.create(<PackContainer id={1} />).toJSON();
+
+    expect(tree).toMatchSnapshot();
   });
 });

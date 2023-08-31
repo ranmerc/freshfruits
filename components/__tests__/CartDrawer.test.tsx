@@ -3,6 +3,7 @@ import "@testing-library/jest-dom";
 import CartDrawer from "../CartDrawer";
 import useCartItemCount from "@/hooks/useCartItemCount";
 import useCartValue from "@/hooks/useCartValue";
+import renderer from "react-test-renderer";
 
 jest.mock("@/hooks/useCartItemCount");
 jest.mock("@/hooks/useCartValue");
@@ -18,6 +19,19 @@ describe("Cart Drawer Component", () => {
     render(<CartDrawer />);
 
     expect(screen.queryByRole("link")).not.toBeInTheDocument();
+
+    const tree = renderer.create(<CartDrawer />).toJSON();
+
+    expect(tree).toMatchSnapshot();
+  });
+
+  it("Renders correctly when cart is not empty", () => {
+    mockedUseCartItemCount.mockReturnValue(3);
+    mockedUseCartValue.mockReturnValue(90);
+
+    const tree = renderer.create(<CartDrawer />).toJSON();
+
+    expect(tree).toMatchSnapshot();
   });
 
   it("Renders SVG logo", () => {

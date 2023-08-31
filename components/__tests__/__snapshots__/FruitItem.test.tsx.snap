@@ -1,0 +1,100 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FruitItem component Renders correct fruit details 1`] = `
+<div
+  className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-t4nkj9-MuiPaper-root-MuiCard-root"
+>
+  <a
+    href="/fruit/1"
+    onClick={[Function]}
+    onMouseEnter={[Function]}
+    onTouchStart={[Function]}
+    style={
+      {
+        "color": "inherit",
+        "textDecoration": "none",
+      }
+    }
+  >
+    <div
+      className="MuiCardMedia-root css-1kils9u-MuiCardMedia-root"
+      role="img"
+      style={
+        {
+          "backgroundImage": "url("images.jpg")",
+        }
+      }
+      title="Fruit Name image"
+    />
+    <div
+      className="MuiCardContent-root css-1fe2h86-MuiCardContent-root"
+    >
+      <h4
+        className="MuiTypography-root MuiTypography-h4 css-1kxrs9j-MuiTypography-root"
+      >
+        Fruit Name
+      </h4>
+    </div>
+  </a>
+  <div
+    className="MuiCardActions-root MuiCardActions-spacing css-1t6e9jv-MuiCardActions-root"
+  />
+</div>
+`;
+
+exports[`FruitItem component Renders error state 1`] = `
+<div
+  className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 MuiAlert-root MuiAlert-standardError MuiAlert-standard css-1hdyuqk-MuiPaper-root-MuiAlert-root"
+  role="alert"
+>
+  <div
+    className="MuiAlert-icon css-1ytlwq5-MuiAlert-icon"
+  >
+    <svg
+      aria-hidden={true}
+      className="MuiSvgIcon-root MuiSvgIcon-fontSizeInherit css-1vooibu-MuiSvgIcon-root"
+      data-testid="ErrorOutlineIcon"
+      focusable="false"
+      viewBox="0 0 24 24"
+    >
+      <path
+        d="M11 15h2v2h-2zm0-8h2v6h-2zm.99-5C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"
+      />
+    </svg>
+  </div>
+  <div
+    className="MuiAlert-message css-1pxa9xg-MuiAlert-message"
+  >
+    Error fetching price data for 
+    Fruit Name
+  </div>
+</div>
+`;
+
+exports[`FruitItem component Renders loading state 1`] = `
+<div
+  className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 MuiAlert-root MuiAlert-standardInfo MuiAlert-standard css-1fuz9qr-MuiPaper-root-MuiAlert-root"
+  role="alert"
+>
+  <div
+    className="MuiAlert-icon css-1ytlwq5-MuiAlert-icon"
+  >
+    <svg
+      aria-hidden={true}
+      className="MuiSvgIcon-root MuiSvgIcon-fontSizeInherit css-1vooibu-MuiSvgIcon-root"
+      data-testid="InfoOutlinedIcon"
+      focusable="false"
+      viewBox="0 0 24 24"
+    >
+      <path
+        d="M11,9H13V7H11M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20, 12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10, 10 0 0,0 12,2M11,17H13V11H11V17Z"
+      />
+    </svg>
+  </div>
+  <div
+    className="MuiAlert-message css-1pxa9xg-MuiAlert-message"
+  >
+    Loading prices...
+  </div>
+</div>
+`;

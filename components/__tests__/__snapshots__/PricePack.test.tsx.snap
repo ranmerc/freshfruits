@@ -1,0 +1,496 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PricePack component Renders correct pack details Out of stock 1`] = `
+<span
+  aria-disabled={true}
+  className="MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary Mui-disabled PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary Mui-checked Mui-disabled MuiRadio-root MuiRadio-colorPrimary css-vqmohf-MuiButtonBase-root-MuiRadio-root"
+  onBlur={[Function]}
+  onContextMenu={[Function]}
+  onDragLeave={[Function]}
+  onFocus={[Function]}
+  onKeyDown={[Function]}
+  onKeyUp={[Function]}
+  onMouseDown={[Function]}
+  onMouseLeave={[Function]}
+  onMouseUp={[Function]}
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  tabIndex={-1}
+>
+  <input
+    aria-label="4 for 180"
+    checked={true}
+    className="PrivateSwitchBase-input css-1m9pwf3"
+    disabled={true}
+    name="price-packs"
+    onChange={[Function]}
+    required={false}
+    type="radio"
+    value={1}
+  />
+  <div
+    className="MuiBox-root css-0"
+  >
+    <div
+      className="MuiBox-root css-12xkctz"
+    >
+      <span
+        className="MuiTypography-root MuiTypography-overline css-1qfnaaq-MuiTypography-root"
+      >
+        Out of Stock
+      </span>
+    </div>
+    <div
+      className="MuiStack-root css-1njijdd-MuiStack-root"
+    >
+      <div
+        className="MuiStack-root css-1qdfthb-MuiStack-root"
+      >
+        <p
+          className="MuiTypography-root MuiTypography-body1 css-ndaqpv-MuiTypography-root"
+        >
+          ₹
+          180
+        </p>
+        <p
+          className="MuiTypography-root MuiTypography-body2 css-qc7gyi-MuiTypography-root"
+        >
+          ₹
+          200
+        </p>
+      </div>
+      <span
+        className="MuiTypography-root MuiTypography-caption css-1v2k9m3-MuiTypography-root"
+      >
+        4
+         
+        Nos
+      </span>
+    </div>
+  </div>
+</span>
+`;
+
+exports[`PricePack component Renders correct pack details Renders correct Quantity Renders count 1`] = `
+<span
+  className="MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary Mui-checked MuiRadio-root MuiRadio-colorPrimary css-vqmohf-MuiButtonBase-root-MuiRadio-root"
+  onBlur={[Function]}
+  onContextMenu={[Function]}
+  onDragLeave={[Function]}
+  onFocus={[Function]}
+  onKeyDown={[Function]}
+  onKeyUp={[Function]}
+  onMouseDown={[Function]}
+  onMouseLeave={[Function]}
+  onMouseUp={[Function]}
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  tabIndex={null}
+>
+  <input
+    aria-label="6 for 120"
+    checked={true}
+    className="PrivateSwitchBase-input css-1m9pwf3"
+    disabled={false}
+    name="price-packs"
+    onChange={[Function]}
+    required={false}
+    type="radio"
+    value={1}
+  />
+  <div
+    className="MuiBox-root css-0"
+  >
+    <div
+      className="MuiBox-root css-4f8iwy"
+    >
+      <span
+        className="MuiTypography-root MuiTypography-overline css-1qfnaaq-MuiTypography-root"
+      >
+        20% off
+      </span>
+    </div>
+    <div
+      className="MuiStack-root css-1njijdd-MuiStack-root"
+    >
+      <div
+        className="MuiStack-root css-1qdfthb-MuiStack-root"
+      >
+        <p
+          className="MuiTypography-root MuiTypography-body1 css-ndaqpv-MuiTypography-root"
+        >
+          ₹
+          120
+        </p>
+        <p
+          className="MuiTypography-root MuiTypography-body2 css-qc7gyi-MuiTypography-root"
+        >
+          ₹
+          150
+        </p>
+      </div>
+      <span
+        className="MuiTypography-root MuiTypography-caption css-1v2k9m3-MuiTypography-root"
+      >
+        6
+         
+        Nos
+      </span>
+    </div>
+  </div>
+</span>
+`;
+
+exports[`PricePack component Renders correct pack details Renders correct Quantity Renders weight 1`] = `
+<span
+  className="MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary Mui-checked MuiRadio-root MuiRadio-colorPrimary css-vqmohf-MuiButtonBase-root-MuiRadio-root"
+  onBlur={[Function]}
+  onContextMenu={[Function]}
+  onDragLeave={[Function]}
+  onFocus={[Function]}
+  onKeyDown={[Function]}
+  onKeyUp={[Function]}
+  onMouseDown={[Function]}
+  onMouseLeave={[Function]}
+  onMouseUp={[Function]}
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  tabIndex={null}
+>
+  <input
+    aria-label="300 for 120"
+    checked={true}
+    className="PrivateSwitchBase-input css-1m9pwf3"
+    disabled={false}
+    name="price-packs"
+    onChange={[Function]}
+    required={false}
+    type="radio"
+    value={1}
+  />
+  <div
+    className="MuiBox-root css-0"
+  >
+    <div
+      className="MuiBox-root css-4f8iwy"
+    >
+      <span
+        className="MuiTypography-root MuiTypography-overline css-1qfnaaq-MuiTypography-root"
+      >
+        20% off
+      </span>
+    </div>
+    <div
+      className="MuiStack-root css-1njijdd-MuiStack-root"
+    >
+      <div
+        className="MuiStack-root css-1qdfthb-MuiStack-root"
+      >
+        <p
+          className="MuiTypography-root MuiTypography-body1 css-ndaqpv-MuiTypography-root"
+        >
+          ₹
+          120
+        </p>
+        <p
+          className="MuiTypography-root MuiTypography-body2 css-qc7gyi-MuiTypography-root"
+        >
+          ₹
+          150
+        </p>
+      </div>
+      <span
+        className="MuiTypography-root MuiTypography-caption css-1v2k9m3-MuiTypography-root"
+      >
+        300
+         
+        g
+      </span>
+    </div>
+  </div>
+  <span
+    className="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+  />
+</span>
+`;
+
+exports[`PricePack component Renders correct pack details Renders correct discount Discount is 10% 1`] = `
+<span
+  className="MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary Mui-checked MuiRadio-root MuiRadio-colorPrimary css-vqmohf-MuiButtonBase-root-MuiRadio-root"
+  onBlur={[Function]}
+  onContextMenu={[Function]}
+  onDragLeave={[Function]}
+  onFocus={[Function]}
+  onKeyDown={[Function]}
+  onKeyUp={[Function]}
+  onMouseDown={[Function]}
+  onMouseLeave={[Function]}
+  onMouseUp={[Function]}
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  tabIndex={null}
+>
+  <input
+    aria-label="4 for 180"
+    checked={true}
+    className="PrivateSwitchBase-input css-1m9pwf3"
+    disabled={false}
+    name="price-packs"
+    onChange={[Function]}
+    required={false}
+    type="radio"
+    value={1}
+  />
+  <div
+    className="MuiBox-root css-0"
+  >
+    <div
+      className="MuiBox-root css-4f8iwy"
+    >
+      <span
+        className="MuiTypography-root MuiTypography-overline css-1qfnaaq-MuiTypography-root"
+      >
+        10% off
+      </span>
+    </div>
+    <div
+      className="MuiStack-root css-1njijdd-MuiStack-root"
+    >
+      <div
+        className="MuiStack-root css-1qdfthb-MuiStack-root"
+      >
+        <p
+          className="MuiTypography-root MuiTypography-body1 css-ndaqpv-MuiTypography-root"
+        >
+          ₹
+          180
+        </p>
+        <p
+          className="MuiTypography-root MuiTypography-body2 css-qc7gyi-MuiTypography-root"
+        >
+          ₹
+          200
+        </p>
+      </div>
+      <span
+        className="MuiTypography-root MuiTypography-caption css-1v2k9m3-MuiTypography-root"
+      >
+        4
+         
+        Nos
+      </span>
+    </div>
+  </div>
+  <span
+    className="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+  />
+</span>
+`;
+
+exports[`PricePack component Renders correct pack details Renders correct discount Fixed Price 1`] = `
+<span
+  className="MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary Mui-checked MuiRadio-root MuiRadio-colorPrimary css-vqmohf-MuiButtonBase-root-MuiRadio-root"
+  onBlur={[Function]}
+  onContextMenu={[Function]}
+  onDragLeave={[Function]}
+  onFocus={[Function]}
+  onKeyDown={[Function]}
+  onKeyUp={[Function]}
+  onMouseDown={[Function]}
+  onMouseLeave={[Function]}
+  onMouseUp={[Function]}
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  tabIndex={null}
+>
+  <input
+    aria-label="4 for 200"
+    checked={true}
+    className="PrivateSwitchBase-input css-1m9pwf3"
+    disabled={false}
+    name="price-packs"
+    onChange={[Function]}
+    required={false}
+    type="radio"
+    value={1}
+  />
+  <div
+    className="MuiBox-root css-0"
+  >
+    <div
+      className="MuiBox-root css-4f8iwy"
+    >
+      <span
+        className="MuiTypography-root MuiTypography-overline css-1qfnaaq-MuiTypography-root"
+      >
+        Fixed Price
+      </span>
+    </div>
+    <div
+      className="MuiStack-root css-1njijdd-MuiStack-root"
+    >
+      <div
+        className="MuiStack-root css-1qdfthb-MuiStack-root"
+      >
+        <p
+          className="MuiTypography-root MuiTypography-body1 css-ndaqpv-MuiTypography-root"
+        >
+          ₹
+          200
+        </p>
+      </div>
+      <span
+        className="MuiTypography-root MuiTypography-caption css-1v2k9m3-MuiTypography-root"
+      >
+        4
+         
+        Nos
+      </span>
+    </div>
+  </div>
+</span>
+`;
+
+exports[`PricePack component Renders correct pack details Renders correct price Fixed price 1`] = `
+<span
+  className="MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary Mui-checked MuiRadio-root MuiRadio-colorPrimary css-vqmohf-MuiButtonBase-root-MuiRadio-root"
+  onBlur={[Function]}
+  onContextMenu={[Function]}
+  onDragLeave={[Function]}
+  onFocus={[Function]}
+  onKeyDown={[Function]}
+  onKeyUp={[Function]}
+  onMouseDown={[Function]}
+  onMouseLeave={[Function]}
+  onMouseUp={[Function]}
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  tabIndex={null}
+>
+  <input
+    aria-label="4 for 150"
+    checked={true}
+    className="PrivateSwitchBase-input css-1m9pwf3"
+    disabled={false}
+    name="price-packs"
+    onChange={[Function]}
+    required={false}
+    type="radio"
+    value={1}
+  />
+  <div
+    className="MuiBox-root css-0"
+  >
+    <div
+      className="MuiBox-root css-4f8iwy"
+    >
+      <span
+        className="MuiTypography-root MuiTypography-overline css-1qfnaaq-MuiTypography-root"
+      >
+        Fixed Price
+      </span>
+    </div>
+    <div
+      className="MuiStack-root css-1njijdd-MuiStack-root"
+    >
+      <div
+        className="MuiStack-root css-1qdfthb-MuiStack-root"
+      >
+        <p
+          className="MuiTypography-root MuiTypography-body1 css-ndaqpv-MuiTypography-root"
+        >
+          ₹
+          150
+        </p>
+      </div>
+      <span
+        className="MuiTypography-root MuiTypography-caption css-1v2k9m3-MuiTypography-root"
+      >
+        4
+         
+        Nos
+      </span>
+    </div>
+  </div>
+  <span
+    className="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+  />
+</span>
+`;
+
+exports[`PricePack component Renders correct pack details Renders correct price Price on discount 1`] = `
+<span
+  className="MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary Mui-checked MuiRadio-root MuiRadio-colorPrimary css-vqmohf-MuiButtonBase-root-MuiRadio-root"
+  onBlur={[Function]}
+  onContextMenu={[Function]}
+  onDragLeave={[Function]}
+  onFocus={[Function]}
+  onKeyDown={[Function]}
+  onKeyUp={[Function]}
+  onMouseDown={[Function]}
+  onMouseLeave={[Function]}
+  onMouseUp={[Function]}
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  tabIndex={null}
+>
+  <input
+    aria-label="4 for 120"
+    checked={true}
+    className="PrivateSwitchBase-input css-1m9pwf3"
+    disabled={false}
+    name="price-packs"
+    onChange={[Function]}
+    required={false}
+    type="radio"
+    value={1}
+  />
+  <div
+    className="MuiBox-root css-0"
+  >
+    <div
+      className="MuiBox-root css-4f8iwy"
+    >
+      <span
+        className="MuiTypography-root MuiTypography-overline css-1qfnaaq-MuiTypography-root"
+      >
+        20% off
+      </span>
+    </div>
+    <div
+      className="MuiStack-root css-1njijdd-MuiStack-root"
+    >
+      <div
+        className="MuiStack-root css-1qdfthb-MuiStack-root"
+      >
+        <p
+          className="MuiTypography-root MuiTypography-body1 css-ndaqpv-MuiTypography-root"
+        >
+          ₹
+          120
+        </p>
+        <p
+          className="MuiTypography-root MuiTypography-body2 css-qc7gyi-MuiTypography-root"
+        >
+          ₹
+          150
+        </p>
+      </div>
+      <span
+        className="MuiTypography-root MuiTypography-caption css-1v2k9m3-MuiTypography-root"
+      >
+        4
+         
+        Nos
+      </span>
+    </div>
+  </div>
+</span>
+`;
