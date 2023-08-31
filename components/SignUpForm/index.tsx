@@ -4,7 +4,7 @@ import useSignUp from "@/hooks/useSignUp";
 import FormHead from "../FormHead";
 import { Field, Form, Formik } from "formik";
 import { PersonAdd } from "@mui/icons-material";
-import SignupSchema from "@/schemas/SignUpSchema";
+import SignUpSchema from "@/schemas/SignUpSchema";
 import { SignUpFormValues } from "@/types/LoginTypes";
 import { Button, Stack, TextField } from "@mui/material";
 import AlertSnackbar from "../AlertSnackbar/AlertSnackbar";
@@ -22,7 +22,7 @@ export default function SignUpForm() {
       <FormHead SVGIcon={PersonAdd} title="Sign Up" />
       <Formik
         initialValues={{ username: "", email: "", password: "" }}
-        validationSchema={SignupSchema}
+        validationSchema={SignUpSchema}
         onSubmit={handleLogin}
       >
         {({ errors, touched, isValid }) => (
