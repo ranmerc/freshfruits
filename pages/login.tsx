@@ -1,5 +1,5 @@
 import AuthPage from "@/components/AuthPage/AuthPage";
-import LoginForm from "@/components/LoginForm/LoginForm";
+import LoginForm from "@/components/LoginForm";
 import Head from "next/head";
 
 export default function Login() {
