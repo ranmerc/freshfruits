@@ -1,7 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import { Pack } from "@/types/PriceData";
-import PricePack from ".";
+import PricePack from "../PricePack";
 
 describe("PricePack component", () => {
   describe("Renders correct pack details", () => {

@@ -1,12 +1,14 @@
 import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
-import PackContainer from ".";
+import PackContainer from "../PackContainer";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import useFetchPrice from "@/hooks/useFetchPrice";
 import { ReactNode } from "react";
+import { useCartContext } from "@/context/CartContext";
 
 // telling jest to load the mock implementation from __mocks__
 jest.mock("@/hooks/useFetchPrice");
+jest.mock("@/context/CartContext");
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -22,15 +24,20 @@ const wrapper = ({ children }: { children: ReactNode }) => (
 
 // satisfying ts error no mockImplementation
 const mocked = useFetchPrice as jest.Mock;
+const mockedUseCartContext = useCartContext as jest.Mock;
+mockedUseCartContext.mockReturnValue({
+  addItemToCart: jest.fn(),
+});
 
 describe("Pack container", () => {
-  test("Renders loading view", () => {
+  it("Renders loading view", () => {
     mocked.mockImplementation(() => ({
       isLoading: true,
       isError: false,
       data: null,
       isSuccess: false,
     }));
+
     render(<PackContainer id={1} />, { wrapper });
 
     expect(
@@ -38,7 +45,7 @@ describe("Pack container", () => {
     ).toBeInTheDocument();
   });
 
-  test("Renders error view", () => {
+  it("Renders error view", () => {
     mocked.mockImplementation(() => ({
       isLoading: false,
       isError: true,
@@ -51,7 +58,7 @@ describe("Pack container", () => {
     expect(screen.getByText("Unable to load prices!")).toBeInTheDocument();
   });
 
-  test("Renders heading", () => {
+  it("Renders heading", () => {
     mocked.mockImplementation(() => ({
       isLoading: false,
       isError: false,
@@ -81,7 +88,7 @@ describe("Pack container", () => {
     expect(screen.getByRole("heading", { level: 3 })).toBeInTheDocument();
   });
 
-  test("Renders price packs", () => {
+  it("Renders price packs", () => {
     mocked.mockImplementation(() => ({
       isLoading: false,
       isError: false,
