@@ -13,14 +13,14 @@ jest.mock("@/components/CartItem", () => {
 const mockedUseCartContext = useCartContext as jest.Mock;
 
 describe("CartItemList component", () => {
-  test("Renders correctly when list is empty", () => {
+  it("Renders correctly when list is empty", () => {
     mockedUseCartContext.mockReturnValue({ cartItems: [] });
     render(<CartItemList />);
 
     expect(screen.getByRole("alert")).toHaveTextContent("Your cart is empty!");
   });
 
-  test("Renders list", () => {
+  it("Renders list", () => {
     const items = [
       {
         fruitId: 1,

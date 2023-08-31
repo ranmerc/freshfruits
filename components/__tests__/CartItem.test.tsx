@@ -42,7 +42,7 @@ const cartItemValue = (details: Partial<CartItemType>): CartItemType => {
 };
 
 describe("CartItem component", () => {
-  test("Renders loading state", () => {
+  it("Renders loading state", () => {
     mockedUseFetchFruit.mockImplementation((id: number) => ({
       isLoading: true,
       isError: false,
@@ -62,7 +62,7 @@ describe("CartItem component", () => {
     expect(screen.getByText("Loading item...")).toBeInTheDocument();
   });
 
-  test("Renders error state", () => {
+  it("Renders error state", () => {
     mockedUseFetchFruit.mockImplementation((id: number) => ({
       isLoading: false,
       isError: true,
@@ -84,7 +84,7 @@ describe("CartItem component", () => {
     expect(screen.getByText("Error loading item!")).toBeInTheDocument();
   });
 
-  test("Renders correct fruit details - 1", () => {
+  it("Renders correct fruit details - 1", () => {
     mockedUseFetchFruit.mockImplementation(() => ({
       isLoading: false,
       isError: false,
@@ -153,7 +153,7 @@ describe("CartItem component", () => {
     );
   });
 
-  test("Renders correct fruit details - 2", () => {
+  it("Renders correct fruit details - 2", () => {
     mockedUseFetchFruit.mockImplementation(() => ({
       isLoading: false,
       isError: false,
@@ -226,7 +226,7 @@ describe("CartItem component", () => {
     );
   });
 
-  test("Functions correctly", async () => {
+  it("Functions correctly", async () => {
     mockedUseFetchFruit.mockImplementation(() => ({
       isLoading: false,
       isError: false,
